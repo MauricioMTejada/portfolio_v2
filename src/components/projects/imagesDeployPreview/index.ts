@@ -1,0 +1,1 @@
+export { default as ingeniaProject } from "./ingenia.jpg"
