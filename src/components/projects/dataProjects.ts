@@ -1,21 +1,12 @@
-import { Javascript } from '@mui/icons-material';
-import { ingeniaProject } from './imagesDeployPreview';
-import { logoJavascript, logoMaterialui, logoTypescript } from './imagesTechnologies';
-import { ITechnologies, techJavascript, techMaterialui, techTypescript } from './dataTechnologies';
+import { ingeniaProject, timbringProject, countriesProject, cardQRProject, pokedexProject } from './imagesDeployPreview';
+import { ITechnologies, techAuth0, techJavascript, techMaterialui, techNextjs, techTailwind, techTypescript, techVite } from './dataTechnologies';
 
 interface Project {
     name: string;
     imageProject: string;
     description: string;
-    // technologies: technologiesList[];
     technologies: ITechnologies[];
 }
-
-export type technologiesList =
-    "javascript"
-    | "typescript"
-    | "materialui";
-
 
 export const dataProjects: Project[] = [
     {
@@ -25,4 +16,28 @@ export const dataProjects: Project[] = [
         // technologies:[ 'javascript', 'materialui' ],
         technologies: [techJavascript, techMaterialui],
     },
+    {
+        name: "Timbring",
+        imageProject: timbringProject,
+        description: "Servicio de entrega para Mercadolibre",
+        technologies: [techJavascript, techNextjs, techAuth0, techTailwind],
+    },
+    {
+        name: "Countries",
+        imageProject: countriesProject,
+        description: "Buscador de paises",
+        technologies: [ techJavascript, techMaterialui, techVite ]
+    },
+    {
+        name: "Card.QR",
+        imageProject: cardQRProject,
+        description: "Generador de Tarjeta QR",
+        technologies: [ techJavascript, techMaterialui, techVite ]
+    },
+    {
+        name: "Pokedex",
+        imageProject: pokedexProject,
+        description: "Pokedex",
+        technologies: [ techJavascript, techMaterialui, techVite ]
+    }
 ];

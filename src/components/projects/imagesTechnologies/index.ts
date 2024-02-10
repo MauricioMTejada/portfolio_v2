@@ -1,3 +1,7 @@
 export { default as logoJavascript } from './javascript.png'
 export { default as logoTypescript } from './typescript.png'
 export { default as logoMaterialui } from './materialui.png'
+export { default as logoAuth0 } from './auth0.png'
+export { default as logoTailwind } from './tailwind.png'
+export { default as logoNextjs } from './nextjs.png'
+export { default as logoVite } from './vite.png'
