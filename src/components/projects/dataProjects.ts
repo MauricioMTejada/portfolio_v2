@@ -1,4 +1,4 @@
-import { ingeniaProject, timbringProject, countriesProject, cardQRProject, pokedexProject } from './imagesDeployPreview';
+import { ingeniaProject, timbringProject, countriesProject, cardQRProject, pokedexProject, centralMediaProject, radiobrowserProject } from './imagesDeployPreview';
 import { ITechnologies, techAuth0, techJavascript, techMaterialui, techNextjs, techTailwind, techTypescript, techVite } from './dataTechnologies';
 
 interface Project {
@@ -38,6 +38,18 @@ export const dataProjects: Project[] = [
         name: "Pokedex",
         imageProject: pokedexProject,
         description: "Pokedex",
+        technologies: [ techJavascript, techMaterialui, techVite ]
+    },
+    {
+        name: "centralMedia",
+        imageProject: centralMediaProject,
+        description: "centralMedia",
+        technologies: [ techJavascript, techMaterialui, techVite ]
+    },
+    {
+        name: "radiobrowser",
+        imageProject: radiobrowserProject,
+        description: "radiobrowser",
         technologies: [ techJavascript, techMaterialui, techVite ]
     }
 ];

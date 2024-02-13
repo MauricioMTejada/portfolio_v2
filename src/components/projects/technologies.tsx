@@ -12,17 +12,37 @@ export const Technologies: React.FC<TechnologiesProps> = ({technologies}) => {
 	return (
 		<div style={{ display: "flex", flexDirection: "row" }}>
 			{technologies.map((tech, index) => (
-				<Card  raised key={index} style={{ display: "flex", flexDirection: "column", alignItems: "center", padding: "5px", margin: "5px"}}>
+				<Card
+					raised
+					key={index}
+					style={{
+						display: "flex",
+						flexDirection: "row",
+						alignItems: "center",
+						padding: "5px",
+						margin: "5px",
+						borderRadius: "10px",
+					}}>
 					<img
 						alt={tech.name}
 						src={tech.image}
-						style={{ width: "35px", height: "35px" }}
+						style={{ width: "30px", height: "30px" }}
 					/>
-					<div style={{padding: 0, paddingBottom: "0px", maxWidth: "70px"}}>
+					<div
+						style={{
+							padding: 0,
+							paddingBottom: "0px",
+							// maxWidth: "70px",
+							paddingLeft: "5px",
+						}}>
 						<Typography
 							variant="subtitle2"
 							color="text.secondary"
-							sx={{ display: "inline", overflowWrap: "break-word", wordWrap: "break-word",  }}>
+							sx={{
+								display: "inline",
+								overflowWrap: "break-word",
+								wordWrap: "break-word",
+							}}>
 							{tech.name}
 						</Typography>
 					</div>
