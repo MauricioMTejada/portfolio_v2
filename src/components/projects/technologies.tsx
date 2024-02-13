@@ -8,7 +8,7 @@ interface TechnologiesProps {
 }
 
 export const Technologies: React.FC<TechnologiesProps> = ({technologies}) => {
-	console.log(technologies)
+	// console.log(technologies)
 	return (
 		<div style={{ display: "flex", flexDirection: "row" }}>
 			{technologies.map((tech, index) => (

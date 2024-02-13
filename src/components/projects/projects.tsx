@@ -6,7 +6,7 @@ import { Technologies } from './technologies';
 
 
 export const Projects = () => {
-	console.log(dataProjects)
+	// console.log(dataProjects)
   return (
     <div>
         <h2>Proyectos</h2>
