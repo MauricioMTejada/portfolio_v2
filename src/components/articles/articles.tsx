@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { request } from "./request";
 import { CircularProgress } from "@mui/material";
 
-import { Slides } from "../slides/slides";
+import { Slides } from "./articlesReactResponsiveCarousel";
 import SimpleSlider from "./articlesReactSlick";
 
 export interface Article {
