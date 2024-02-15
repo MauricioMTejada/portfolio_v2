@@ -3,6 +3,7 @@ import { request } from "./request";
 import { CircularProgress } from "@mui/material";
 
 import { Slides } from "../slides/slides";
+import SimpleSlider from "./articlesReactSlick";
 
 export interface Article {
 	id: number;
@@ -42,6 +43,7 @@ export const Articles = () => {
 			<h2>Publicaciones</h2>
 
 			{data.length > 0 ? <Slides data={data} /> : <CircularProgress />}
+			{/* {data.length > 0 ? <SimpleSlider data={data} /> : <CircularProgress />} */}
 		</div>
 	);
 };

@@ -1,3 +1,4 @@
+
 import { Component } from "react";
 
 import {
@@ -87,9 +88,9 @@ export const Slides = ({ data }) => {
 							centerMode
 							centerSlidePercentage={60}
 							infiniteLoop
-							width={"570px"}
+							width={"900px"}
 							showThumbs={false}>
-							{data.map((article) => (
+							{data.map((article, index) => (
 								<div key={article.id} style={{ margin: "auto" }}>
 									<Card
 										sx={{
@@ -99,6 +100,7 @@ export const Slides = ({ data }) => {
 											width: 310,
 											// height: 390,
 											margin: "auto",
+											opacity: this.state.currentSlide === index ? 1 : 0.4,
 										}}>
 										<CardActionArea
 											sx={{
