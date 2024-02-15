@@ -13,6 +13,7 @@ import { Skills } from './components/skils/skills';
 
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
+import { SmallProjects } from './components/smallProjects/smallProjects';
 
 const darkTheme = createTheme({
   palette: {
@@ -30,6 +31,7 @@ function App() {
       <main>
         <section> <Skills /></section>
         <section> <Projects /> </section>
+        <section> <SmallProjects /> </section>
         <section> <Articles /></section>
       </main>
 

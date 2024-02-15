@@ -1,5 +1,6 @@
-import { Card, CardActionArea, CardContent, CardMedia, Typography } from "@mui/material";
 import React from "react";
+
+import { Typography, } from "@mui/material";
 
 import { ITechnologies } from "./dataTechnologies";
 
@@ -7,47 +8,44 @@ interface TechnologiesProps {
 	technologies: ITechnologies[];
 }
 
-export const Technologies: React.FC<TechnologiesProps> = ({technologies}) => {
+export const Technologies: React.FC<TechnologiesProps> = ({ technologies }) => {
 	// console.log(technologies)
 	return (
 		<div style={{ display: "flex", flexDirection: "row" }}>
-			{technologies.map((tech, index) => (
-				<Card
-					raised
-					key={index}
-					style={{
-						display: "flex",
-						flexDirection: "row",
-						alignItems: "center",
-						padding: "5px",
-						margin: "5px",
-						borderRadius: "10px",
-					}}>
-					<img
-						alt={tech.name}
-						src={tech.image}
-						style={{ width: "30px", height: "30px" }}
-					/>
+			<div
+				style={{
+					display: "flex",
+					flexDirection: "row",
+					flexWrap: "wrap",
+					height: "34px",
+				}}>
+				{technologies.map((tech, index) => (
 					<div
+						key={index}
 						style={{
-							padding: 0,
-							paddingBottom: "0px",
-							// maxWidth: "70px",
-							paddingLeft: "5px",
+							display: "flex",
+							alignItems: "center",
+							marginRight: "5px",
+							border: "2px solid #6d6d6d",
+							borderRadius: "16px",
 						}}>
-						<Typography
-							variant="subtitle2"
-							color="text.secondary"
-							sx={{
-								display: "inline",
-								overflowWrap: "break-word",
-								wordWrap: "break-word",
-							}}>
+						<img
+							src={tech.image}
+							alt={tech.name}
+							style={{
+								width: "30px",
+								height: "30px",
+								marginRight: "5px",
+								borderRadius: "50%",
+								padding: "2px",
+							}}
+						/>
+						<Typography variant="body1" style={{ marginRight: "5px" }}>
 							{tech.name}
 						</Typography>
 					</div>
-				</Card>
-			))}
+				))}
+			</div>
 		</div>
 	);
 };

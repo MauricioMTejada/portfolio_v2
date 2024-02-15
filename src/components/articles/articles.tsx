@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { request } from "./request";
 import { CircularProgress } from "@mui/material";
 
-import { Carrousel } from "./articlesCarrousel";
+import { Slides } from "../slides/slides";
 
 export interface Article {
 	id: number;
@@ -10,7 +10,7 @@ export interface Article {
 	cover_image: string;
 	description: string;
 	title: string;
-  }
+}
 
 export const Articles = () => {
 	const [data, setData] = useState<Article[]>([]);
@@ -26,9 +26,9 @@ export const Articles = () => {
 					cover_image: item.cover_image,
 					description: item.description,
 					title: item.title,
-				  }));
-				//   console.log(filteredData);
-				  setData(filteredData);
+				}));
+				// console.log(filteredData);
+				setData(filteredData);
 			} catch (error) {
 				console.error("Error al obtener los datos:", error);
 			}
@@ -41,7 +41,7 @@ export const Articles = () => {
 		<div>
 			<h2>Publicaciones</h2>
 
-			{data.length > 0 ? <Carrousel data={data} /> : <CircularProgress />}
+			{data.length > 0 ? <Slides data={data} /> : <CircularProgress />}
 		</div>
 	);
 };
