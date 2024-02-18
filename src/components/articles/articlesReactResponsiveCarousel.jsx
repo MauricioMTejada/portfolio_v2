@@ -125,10 +125,10 @@ export const Slides = ({ data }) => {
 													gutterBottom
 													variant="h5"
 													component="div"
-													sx={{ lineHeight: 1.1, margin: "15px 0", height: "106px" }}>
+													sx={{ lineHeight: 1.1, margin: "15px 0", height: "106px", fontFamily: "Onest, sans-serif" }}>
 													{article.title}
 												</Typography>
-												<Typography variant="body1" color="text.secondary" sx={{ lineHeight: 1.4, marginTop: "20px", marginBottom: "60px" }}>
+												<Typography variant="body1" color="text.secondary" sx={{ lineHeight: 1.4, marginTop: "20px", marginBottom: "60px", fontFamily: "Onest, sans-serif" }}>
 													{article.description}
 												</Typography>
 											</CardContent>
