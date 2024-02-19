@@ -27,11 +27,9 @@ function App() {
   return (
     <div className="App">
       <header>
-        <h1>Mauricio Tejada</h1>
       </header>
 
       <main>
-      <h1>Hola, soy Mauricio</h1>
 
         <section> <Presentation /></section>
         <section> <Skills /></section>
