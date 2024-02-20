@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from "react";
 import { request } from "./request";
 import { CircularProgress } from "@mui/material";
+import ArtTrackOutlinedIcon from '@mui/icons-material/ArtTrackOutlined';
 
 import { Slides } from "./articlesReactResponsiveCarousel";
 import SimpleSlider from "./articlesReactSlick";
+import { TitlesSections } from "../../utils/titlesSections/titlesSections";
 
 export interface Article {
 	id: number;
@@ -40,7 +42,7 @@ export const Articles = () => {
 
 	return (
 		<div>
-			<h2>Publicaciones</h2>
+			<TitlesSections title={"Publicaciones"} icon={ArtTrackOutlinedIcon} />
 
 			{data.length > 0 ? <Slides data={data} /> : <CircularProgress />}
 			{/* {data.length > 0 ? <SimpleSlider data={data} /> : <CircularProgress />} */}

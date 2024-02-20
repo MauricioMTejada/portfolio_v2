@@ -28,8 +28,8 @@ export const MediaImageProfile = () => {
 		const dx = radius * Math.cos(angleRadians) - traslateButton;
 		const dy = radius * Math.sin(angleRadians) - traslateButton;
 
-		console.log(traslateButton);
-		console.log(`dx: ${dx}, dy: ${dy}`);
+		// console.log(traslateButton);
+		// console.log(`dx: ${dx}, dy: ${dy}`);
 
 		return { dx, dy };
 	};

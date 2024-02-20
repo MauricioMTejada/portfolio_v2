@@ -1,6 +1,9 @@
 import { dataProjects } from "../../utils/data/dataProjects";
 import { Paper } from "@mui/material";
 import { ProjectsCard } from "./projectsCard";
+import { TitlesSections } from "../../utils/titlesSections/titlesSections";
+import CodeIcon from '@mui/icons-material/Code';
+import TerminalIcon from '@mui/icons-material/Terminal';
 
 export const Projects = () => {
 
@@ -8,14 +11,14 @@ export const Projects = () => {
 
 	return (
 		<div>
-			<h2>Proyectos</h2>
+			<TitlesSections title={"Proyectos"} icon={TerminalIcon} />
 
 			<Paper
 				elevation={0}
 				variant="outlined"
 				sx={{ marginLeft: 2, marginRight: 2, padding: 2 }}>
 				{dataProjectsFilter.map((data, index) => {
-					return <ProjectsCard data={data} index={index} />;
+					return <ProjectsCard key={index} data={data} index={index} />;
 				})}
 			</Paper>
 		</div>

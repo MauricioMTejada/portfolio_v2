@@ -25,25 +25,36 @@ const darkTheme = createTheme({
 
 function App() {
   return (
-    <div className="App">
-      <header>
-      </header>
+      <div className="bg-gradient">
+		<div className="App">
+      {/* <div className="absolute top-0 z-[-2] h-screen w-screen bg-neutral-950 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))]"> */}
+			<header></header>
 
-      <main>
+			<main>
+				<section>
+					{" "}
+					<Presentation />
+				</section>
+				<section>
+					{" "}
+					<Skills />
+				</section>
+				<section>
+					{" "}
+					<Projects />{" "}
+				</section>
+				<section>
+					{" "}
+					<SmallProjects />{" "}
+				</section>
+				<section>
+					{" "}
+					<Articles />
+				</section>
+			</main></div>
 
-        <section> <Presentation /></section>
-        <section> <Skills /></section>
-        <section> <Projects /> </section>
-        <section> <SmallProjects /> </section>
-        <section> <Articles /></section>
-      </main>
-
-      <footer>
-
-      </footer>
-
-    </div>
-  );
+			<footer></footer></div>
+	);
 }
 
 export default App;
