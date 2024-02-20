@@ -1,151 +1,44 @@
-import {
-	logoJavascript,
-	logoMaterialui,
-	logoTypescript,
-	logoAuth0,
-	logoTailwind,
-	logoNextjs,
-	logoVite,
-    logoHtml,
-    logoCss,
-    logoReact,
-    logoRedux,
-    logoReduxToolkit,
-    logoNode,
-    logoPostgresql,
-    logoMongodb,
-    logoGit,
-    logoGithub,
-    logoVisualStudioCode,
-    logoPostman,
-    logoVercel,
-    logoFigma,
-    logoTrello,
-    logoExpress,
-} from "./imagesTechnologies";
+import { logoJavascript, logoMaterialui, logoTypescript, logoAuth0, logoTailwind,
+    logoNextjs, logoVite, logoHtml, logoCss, logoReact, logoRedux, logoReduxToolkit,
+    logoNode, logoPostgresql, logoMongodb, logoGit, logoGithub, logoVisualStudioCode,
+    logoPostman, logoVercel, logoFigma, logoTrello, logoExpress, } from "./imagesTechnologies";
+
+export type stringTypeTech = "language" | "framework" | "library" | "database" | "tool";
+
+export type TechnologyName = "HTML" | "CSS" | "Javascript" | "typecript" | "React"
+    | "Next.JS" | "Node.JS" | "Express" | "PostgreSQL" | "MongoDB" | "MaterialUI"
+    | "Redux" | "ReduxToolkit" | "Tailwind" | "Auth0" | "Git" | "GitHub"
+    | "Visual Studio Code" | "Postman" | "Figma" | "Vercel" | "Trello" | "Vite";
 
 export interface ITechnologies {
-    name: string;
+    name: TechnologyName;
     image: string;
+    typeTech: stringTypeTech;
 }
+const technologies: ITechnologies[] = [
+    { name: "HTML", image: logoHtml, typeTech: "language" },
+    { name: "CSS", image: logoCss, typeTech: "language" },
+    { name: "Javascript", image: logoJavascript, typeTech: "language" },
+    { name: "typecript", image: logoTypescript, typeTech: "language" },
+    { name: "React", image: logoReact, typeTech: "framework" },
+    { name: "Next.JS", image: logoNextjs, typeTech: "framework" },
+    { name: "Node.JS", image: logoNode, typeTech: "framework" },
+    { name: "Express", image: logoExpress, typeTech: "framework" },
+    { name: "PostgreSQL", image: logoPostgresql, typeTech: "database" },
+    { name: "MongoDB", image: logoMongodb, typeTech: "database" },
+    { name: "MaterialUI", image: logoMaterialui, typeTech: "library" },
+    { name: "Redux", image: logoRedux, typeTech: "library" },
+    { name: "ReduxToolkit", image: logoReduxToolkit, typeTech: "library" },
+    { name: "Tailwind", image: logoTailwind, typeTech: "library" },
+    { name: "Auth0", image: logoAuth0, typeTech: "library" },
+    { name: "Git", image: logoGit, typeTech: "tool" },
+    { name: "GitHub", image: logoGithub, typeTech: "tool" },
+    { name: "Visual Studio Code", image: logoVisualStudioCode, typeTech: "tool" },
+    { name: "Postman", image: logoPostman, typeTech: "tool" },
+    { name: "Figma", image: logoFigma, typeTech: "tool" },
+    { name: "Vercel", image: logoVercel, typeTech: "tool" },
+    { name: "Trello", image: logoTrello, typeTech: "tool" },
+    { name: "Vite", image: logoVite, typeTech: "tool" }
+];
 
-export const techJavascript: ITechnologies =
-{
-    name: "Javascript",
-    image: logoJavascript,
-};
-
-export  const techTypescript: ITechnologies =
-{
-    name: "Typescript",
-    image: logoTypescript,
-};
-
-export  const techMaterialui: ITechnologies =
-{
-    name: "MaterialUI",
-    image: logoMaterialui,
-};
-
-export const techAuth0: ITechnologies =
-{
-    name: "Auth0",
-    image: logoAuth0,
-}
-
-export const techTailwind: ITechnologies =
-{
-    name: "Tailwind",
-    image: logoTailwind,
-}
-
-export const techNextjs: ITechnologies =
-{
-    name: "Next.JS",
-    image: logoNextjs,
-}
-
-export const techVite: ITechnologies = {
-    name: "Vite",
-    image: logoVite,
-}
-
-export const techHtml: ITechnologies = {
-    name: "HTML",
-    image: logoHtml,
-}
-
-export const techCss: ITechnologies = {
-    name: "CSS",
-    image: logoCss,
-}
-
-export const techReact: ITechnologies = {
-    name: "React",
-    image: logoReact,
-}
-
-export const techRedux: ITechnologies = {
-    name: "Redux",
-    image: logoRedux,
-}
-
-export const techReduxToolkit: ITechnologies = {
-    name: "ReduxToolkit",
-    image: logoReduxToolkit,
-}
-
-export const techNode: ITechnologies = {
-    name: "Node.JS",
-    image: logoNode,
-}
-
-export const techPostgresql: ITechnologies = {
-    name: "PostgreSQL",
-    image: logoPostgresql,
-}
-
-export const techMongoDB: ITechnologies = {
-    name: "MongoDB",
-    image: logoMongodb,
-}
-
-export const techGit: ITechnologies = {
-    name: "Git",
-    image: logoGit,
-}
-
-export const techGithub: ITechnologies = {
-    name: "GitHub",
-    image: logoGithub,
-}
-
-export const techVisualStudioCode: ITechnologies = {
-    name: "Visual Studio Code",
-    image: logoVisualStudioCode,
-}
-
-export const techPostman: ITechnologies = {
-    name: "Postman",
-    image: logoPostman,
-}
-
-export const techVercel: ITechnologies = {
-    name: "Vercel",
-    image: logoVercel,
-}
-
-export const techFigma: ITechnologies = {
-    name: "Figma",
-    image: logoFigma,
-}
-
-export const techTrello: ITechnologies = {
-    name: "Trello",
-    image: logoTrello,
-}
-
-export const techExpress: ITechnologies = {
-    name: "Express",
-    image: logoExpress,
-}
+export default technologies;

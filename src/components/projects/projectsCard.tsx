@@ -2,9 +2,10 @@ import { Card, CardActionArea, CardContent, CardMedia, Typography } from '@mui/m
 import React from 'react'
 import { Technologies } from '../../utils/technologies/technologies'
 import { Project } from '../../utils/data/dataProjects'
+import { IDataProjectWithTech } from '../../utils/data/dataProjectsWithTechnologies';
 
 interface Props {
-    data: Project;
+    data: IDataProjectWithTech;
     index: number;
 }
 

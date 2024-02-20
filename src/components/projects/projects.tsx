@@ -1,13 +1,13 @@
-import { dataProjects } from "../../utils/data/dataProjects";
+import { dataProjectWithTech }  from "../../utils/data/dataProjectsWithTechnologies";
 import { Paper } from "@mui/material";
 import { ProjectsCard } from "./projectsCard";
 import { TitlesSections } from "../../utils/titlesSections/titlesSections";
-import CodeIcon from '@mui/icons-material/Code';
 import TerminalIcon from '@mui/icons-material/Terminal';
 
 export const Projects = () => {
 
-	const dataProjectsFilter = dataProjects.filter( (data) => data.type === "project" );
+
+	const dataProjectsFilter = dataProjectWithTech.filter( (data) => data.type === "project" );
 
 	return (
 		<div>

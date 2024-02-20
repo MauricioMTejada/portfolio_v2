@@ -1,13 +1,14 @@
 import React from "react";
-import { languages } from "../../components/skils/dataSkills";
+// import { languages } from "../../components/skils/dataSkills";
 import { Typography } from "@mui/material";
-import { ITechnologies } from "../technologies/dataTechnologies";
+import { ITechnologies, stringTypeTech } from "../technologies/dataTechnologies";
 
 interface Props {
 	arrayTech: ITechnologies[];
+	typeTech : stringTypeTech;
 }
 
-export const TechnologiesSkills: React.FC<Props> = ({ arrayTech }) => {
+export const TechnologiesSkills: React.FC<Props> = ({ arrayTech, typeTech }) => {
 	const containerStyles: React.CSSProperties = {
 		display: "flex",
 		flexDirection: "column",
@@ -34,7 +35,9 @@ export const TechnologiesSkills: React.FC<Props> = ({ arrayTech }) => {
 
 	return (
 		<div style={containerStyles}>
-			{arrayTech.map((arrayTech, index) => {
+			{arrayTech
+				.filter(tech => tech.typeTech === typeTech)
+				.map((arrayTech, index) => {
 				return (
 					<div key={index} style={itemStyles}>
 						<img src={arrayTech.image} alt={arrayTech.name} style={imageStyles} />
@@ -48,7 +51,7 @@ export const TechnologiesSkills: React.FC<Props> = ({ arrayTech }) => {
 	);
 };
 
-export const TechnologiesSkillsImportant: React.FC<Props> = ({ arrayTech }) => {
+export const TechnologiesSkillsImportant: React.FC<Props> = ({ arrayTech, typeTech }) => {
 	const containerStyles: React.CSSProperties = {
 		display: "flex",
 		flexDirection: "column",
@@ -77,7 +80,9 @@ export const TechnologiesSkillsImportant: React.FC<Props> = ({ arrayTech }) => {
 
 	return (
 		<div style={containerStyles}>
-			{arrayTech.map((arrayTech, index) => {
+			{arrayTech
+				.filter(tech => tech.typeTech === typeTech)
+				.map((arrayTech, index) => {
 				return (
 					<div key={index} style={itemStyles}>
 						<img src={arrayTech.image} alt={arrayTech.name} style={imageStyles} />

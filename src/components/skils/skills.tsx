@@ -1,16 +1,8 @@
 import React, { CSSProperties } from "react";
 import { Typography } from "@mui/material";
-import BuildIcon from '@mui/icons-material/Build';
-import BuildOutlinedIcon from '@mui/icons-material/BuildOutlined';
 import MiscellaneousServicesOutlinedIcon from '@mui/icons-material/MiscellaneousServicesOutlined';
 
-import {
-	languages,
-	frameworks,
-	dataBases,
-	libraries,
-	tools,
-} from "./dataSkills";
+import technologies, { stringTypeTech } from "../../utils/technologies/dataTechnologies";
 import { TechnologiesSkills, TechnologiesSkillsImportant } from "../../utils/technologiesForSkills/technologiesSkills";
 import { TitlesSections } from "../../utils/titlesSections/titlesSections";
 
@@ -48,27 +40,38 @@ export const Skills = () => {
 
 	return (
 		<div>
-			<TitlesSections title={"Tecnologías"} icon={MiscellaneousServicesOutlinedIcon} />
+			<TitlesSections
+				title={"Tecnologías"}
+				icon={MiscellaneousServicesOutlinedIcon}
+			/>
 
 			<div style={columContainer}>
-				{/* Utilizar la constante de estilos */}
 				<div style={columnStyles}>
 					<Typography style={titlesStyles}>Lenguajes:</Typography>
-					<TechnologiesSkillsImportant arrayTech={languages} />
+					<TechnologiesSkillsImportant
+						arrayTech={technologies}
+						typeTech="language"
+					/>
 				</div>
 
 				<div style={columnStyles}>
 					<Typography style={titlesStyles}>Bases de Datos:</Typography>
-					<TechnologiesSkillsImportant arrayTech={dataBases} />
+					<TechnologiesSkillsImportant
+						arrayTech={technologies}
+						typeTech="database"
+					/>
 					<Typography style={titlesStyles}>Frameworks:</Typography>
-					<TechnologiesSkillsImportant arrayTech={frameworks} />
+					<TechnologiesSkillsImportant
+						arrayTech={technologies}
+						typeTech="framework"
+					/>
 				</div>
 
 				<div style={columnStyles}>
 					<Typography style={titlesStyles}>Librerías:</Typography>
-					<TechnologiesSkills arrayTech={libraries} />
+					<TechnologiesSkills arrayTech={technologies} typeTech="library" />
 					<Typography style={titlesStyles}>Herramientas:</Typography>
-					<TechnologiesSkills arrayTech={tools} />
+					<TechnologiesSkills arrayTech={technologies} typeTech="tool" />
 				</div>
 			</div>
 		</div>
