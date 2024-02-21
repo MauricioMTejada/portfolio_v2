@@ -1,40 +1,90 @@
-import { Card, CardActionArea, CardContent, CardMedia, Typography } from '@mui/material'
+import { Typography } from '@mui/material'
 import React from 'react'
 import { Technologies } from '../../utils/technologies/technologies'
-import { Project } from '../../utils/data/dataProjects'
 import { IDataProjectWithTech } from '../../utils/data/dataProjectsWithTechnologies';
+import styles from './projectsCard.module.css'
 
 interface Props {
     data: IDataProjectWithTech;
     index: number;
 }
 
+// Estilos
+	const styleDivPrincipal: React.CSSProperties = {
+		marginBottom: "1rem",
+		display: "flex",
+		flexDirection: "row",
+		alignItems: "center",
+	};
+
+	const styleImageContainer: React.CSSProperties = {
+		display: "flex",
+		flexDirection: "row",
+		alignItems: "center",
+		justifyContent: "center",
+		// padding: "0.5rem",
+	}
+	const styleImageProject: React.CSSProperties = {
+		width: '350px',
+		padding: '1rem',
+	}
+
+	const styleDataContainer: React.CSSProperties = {
+		padding: "2rem",
+	}
+
+	const styleTextTitle: React.CSSProperties = {
+		fontFamily: "Onest, sans-serif",
+		textAlign: 'left',
+	}
+
+	const styleTextDescription: React.CSSProperties = {
+		fontFamily: "Onest, sans-serif",
+		textAlign: 'left',
+	}
+
+	const styleTextTechnologies: React.CSSProperties = {
+		fontFamily: "Onest, sans-serif",
+		textAlign: 'left',
+		marginTop: '20px',
+		marginBottom: '20px',
+	}
+
 export const ProjectsCard: React.FC<Props> = ({ data, index}) => {
   return (
-    <Card key={index} sx={{ marginBottom: 2, display: "flex", textAlign: "left", fontFamily: "Onest, sans-serif" }}>
-					<CardActionArea sx={{ display: "flex", }}>
-						<CardMedia
-							component="img"
-							alt="imageProject"
-							image={data.imageProject}
-							sx={{ width: 300, padding: 2 }}
-						/>
-						<CardContent style={{ width: "100%" }}>
-							<Typography gutterBottom variant="h5" component="div" sx={{ fontFamily: "Onest, sans-serif" }} >
-								{data.name}
-							</Typography>
+		<div className={styles.cardStyle} style={styleDivPrincipal} key={index}>
+			<div style={styleImageContainer}>
+				<img
+					src={data.imageProject}
+					alt="imageProject"
+					style={styleImageProject}
+				/>
+			</div>
 
-							<Typography variant="body1" color="text.secondary" sx={{ fontFamily: "Onest, sans-serif" }}>
-								{data.description}
-							</Typography>
+			<div style={styleDataContainer}>
+				<Typography
+					gutterBottom
+					variant="h5"
+					component="div"
+					style={styleTextTitle}
+					>
+					{data.name}
+				</Typography>
 
-							<Typography style={{ marginTop: 10, fontFamily: "Onest, sans-serif" }} >
-								Tecnologías Usadas:
-							</Typography>
+				<Typography
+					variant="body1"
+					color="text.secondary"
+					style={styleTextDescription}
+				>
+					{data.description}
+				</Typography>
 
-							<Technologies technologies={data.technologies} />
-						</CardContent>
-					</CardActionArea>
-				</Card>
-  )
+				<Typography style={styleTextTechnologies}>
+					Tecnologías Usadas:
+				</Typography>
+
+				<Technologies technologies={data.technologies} />
+			</div>
+		</div>
+	);
 }

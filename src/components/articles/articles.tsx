@@ -6,6 +6,7 @@ import ArtTrackOutlinedIcon from '@mui/icons-material/ArtTrackOutlined';
 import { Slides } from "./articlesReactResponsiveCarousel";
 import SimpleSlider from "./articlesReactSlick";
 import { TitlesSections } from "../../utils/titlesSections/titlesSections";
+import OutlineLayout from "../layout/layout";
 
 export interface Article {
 	id: number;
@@ -22,16 +23,7 @@ export const Articles = () => {
 		const fetchData = async () => {
 			try {
 				const result = await request();
-				// console.log(result);
-				const filteredData = result.map((item: any) => ({
-					id: item.id,
-					url: item.url,
-					cover_image: item.cover_image,
-					description: item.description,
-					title: item.title,
-				}));
-				// console.log(filteredData);
-				setData(filteredData);
+				setData(result);
 			} catch (error) {
 				console.error("Error al obtener los datos:", error);
 			}
@@ -41,11 +33,11 @@ export const Articles = () => {
 	}, []);
 
 	return (
-		<div>
+		<OutlineLayout>
 			<TitlesSections title={"Publicaciones"} icon={ArtTrackOutlinedIcon} />
 
 			{data.length > 0 ? <Slides data={data} /> : <CircularProgress />}
 			{/* {data.length > 0 ? <SimpleSlider data={data} /> : <CircularProgress />} */}
-		</div>
+		</OutlineLayout>
 	);
 };

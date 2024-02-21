@@ -5,7 +5,7 @@ import { logoJavascript, logoMaterialui, logoTypescript, logoAuth0, logoTailwind
 
 export type stringTypeTech = "language" | "framework" | "library" | "database" | "tool";
 
-export type TechnologyName = "HTML" | "CSS" | "Javascript" | "typecript" | "React"
+export type TechnologyName = "HTML" | "CSS" | "JavaScript" | "TypeScript" | "React"
     | "Next.JS" | "Node.JS" | "Express" | "PostgreSQL" | "MongoDB" | "MaterialUI"
     | "Redux" | "ReduxToolkit" | "Tailwind" | "Auth0" | "Git" | "GitHub"
     | "Visual Studio Code" | "Postman" | "Figma" | "Vercel" | "Trello" | "Vite";
@@ -18,8 +18,8 @@ export interface ITechnologies {
 const technologies: ITechnologies[] = [
     { name: "HTML", image: logoHtml, typeTech: "language" },
     { name: "CSS", image: logoCss, typeTech: "language" },
-    { name: "Javascript", image: logoJavascript, typeTech: "language" },
-    { name: "typecript", image: logoTypescript, typeTech: "language" },
+    { name: "JavaScript", image: logoJavascript, typeTech: "language" },
+    { name: "TypeScript", image: logoTypescript, typeTech: "language" },
     { name: "React", image: logoReact, typeTech: "framework" },
     { name: "Next.JS", image: logoNextjs, typeTech: "framework" },
     { name: "Node.JS", image: logoNode, typeTech: "framework" },

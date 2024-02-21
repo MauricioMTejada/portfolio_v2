@@ -18,7 +18,7 @@ export const TitlesSections: React.FC<Props> = ({ title, icon: IconComponent }) 
 		flexDirection: "row",
         justifyContent: "center",
         alignItems: "center",
-        marginTop: "4rem",
+        marginTop: "1rem",
 	};
 
     const testStyle: CSSProperties = {

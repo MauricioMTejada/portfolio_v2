@@ -1,18 +1,22 @@
 import React, { CSSProperties } from "react";
 import { Typography } from "@mui/material";
-import MiscellaneousServicesOutlinedIcon from '@mui/icons-material/MiscellaneousServicesOutlined';
+import MiscellaneousServicesOutlinedIcon from "@mui/icons-material/MiscellaneousServicesOutlined";
 
-import technologies, { stringTypeTech } from "../../utils/technologies/dataTechnologies";
-import { TechnologiesSkills, TechnologiesSkillsImportant } from "../../utils/technologiesForSkills/technologiesSkills";
+import technologies from "../../utils/technologies/dataTechnologies";
+import {
+	TechnologiesSkills,
+	TechnologiesSkillsImportant,
+} from "../../utils/technologiesForSkills/technologiesSkills";
 import { TitlesSections } from "../../utils/titlesSections/titlesSections";
+import OutlineLayout from "../layout/layout";
 
-export const Skills = () => {
+export const Skills: React.FC = () => {
 	// Definir los estilos en una constante
 	const columContainer: CSSProperties = {
 		display: "flex",
 		flexDirection: "row",
 		justifyContent: "space-evenly",
-	}
+	};
 	const columnStyles: CSSProperties = {
 		display: "flex",
 		flexDirection: "column",
@@ -30,16 +34,16 @@ export const Skills = () => {
 		marginTop: "0.8rem",
 		marginBottom: "0.8rem",
 		textAlign: "left",
-	}
+	};
 
 	const titlePrincipalStyles: CSSProperties = {
 		fontFamily: "Onest, sans-serif",
 		display: "flex",
 		flexDirection: "row",
-	}
+	};
 
 	return (
-		<div>
+		<OutlineLayout>
 			<TitlesSections
 				title={"Tecnologías"}
 				icon={MiscellaneousServicesOutlinedIcon}
@@ -74,6 +78,6 @@ export const Skills = () => {
 					<TechnologiesSkills arrayTech={technologies} typeTech="tool" />
 				</div>
 			</div>
-		</div>
+		</OutlineLayout>
 	);
 };
