@@ -10,6 +10,11 @@ interface Props {
 }
 
 // Estilos
+	const styleA: React.CSSProperties = {
+		color: "inherit",
+		textDecoration: "none",
+	}
+
 	const styleDivPrincipal: React.CSSProperties = {
 		marginBottom: "1rem",
 		display: "flex",
@@ -36,6 +41,7 @@ interface Props {
 	const styleTextTitle: React.CSSProperties = {
 		fontFamily: "Onest, sans-serif",
 		textAlign: 'left',
+		color: "#FEF08A",
 	}
 
 	const styleTextDescription: React.CSSProperties = {
@@ -52,6 +58,7 @@ interface Props {
 
 export const ProjectsCard: React.FC<Props> = ({ data, index}) => {
   return (
+	<a href={data.url} target="_blank" className={styles.styleLink} >
 		<div className={styles.cardStyle} style={styleDivPrincipal} key={index}>
 			<div style={styleImageContainer}>
 				<img
@@ -85,6 +92,6 @@ export const ProjectsCard: React.FC<Props> = ({ data, index}) => {
 
 				<Technologies technologies={data.technologies} />
 			</div>
-		</div>
+		</div></a>
 	);
 }

@@ -21,9 +21,6 @@
   -webkit-transition: max-width 0.5s;
   transition: max-width 0.5s;
   border: var(--border-thickness) solid rgb(0, 255, 70);
-}
-
-.expandButton {
   cursor: pointer;
 }
 
@@ -53,4 +50,10 @@
   white-space: nowrap;
   padding-right: var(--text-padding-right);
   /* padding-right: 10px; */
+}
+
+.divContainer {
+  display: "flex";
+  justify-content: "flex-start";
+  flex-direction: "row"
 }

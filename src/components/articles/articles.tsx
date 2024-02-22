@@ -4,9 +4,10 @@ import { CircularProgress } from "@mui/material";
 import ArtTrackOutlinedIcon from '@mui/icons-material/ArtTrackOutlined';
 
 import { Slides } from "./articlesReactResponsiveCarousel";
-import SimpleSlider from "./articlesReactSlick";
+// import SimpleSlider from "./articlesReactSlick";
 import { TitlesSections } from "../../utils/titlesSections/titlesSections";
 import OutlineLayout from "../layout/layout";
+import { imageTitleArticle } from "../../assets/icons/imagesFromTitles/index"
 
 export interface Article {
 	id: number;
@@ -23,6 +24,7 @@ export const Articles = () => {
 		const fetchData = async () => {
 			try {
 				const result = await request();
+				// console.log(result);
 				setData(result);
 			} catch (error) {
 				console.error("Error al obtener los datos:", error);
@@ -34,9 +36,10 @@ export const Articles = () => {
 
 	return (
 		<OutlineLayout>
-			<TitlesSections title={"Publicaciones"} icon={ArtTrackOutlinedIcon} />
+			{/* <TitlesSections title={"Publicaciones"} icon={ArtTrackOutlinedIcon} /> */}
+			<TitlesSections title={"Publicaciones"} image={imageTitleArticle} />
 
-			{data.length > 0 ? <Slides data={data} /> : <CircularProgress />}
+			{data && data.length > 0 ? <Slides data={data} /> : <CircularProgress />}
 			{/* {data.length > 0 ? <SimpleSlider data={data} /> : <CircularProgress />} */}
 		</OutlineLayout>
 	);

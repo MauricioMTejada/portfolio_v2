@@ -9,6 +9,7 @@ import {
 } from "../../utils/technologiesForSkills/technologiesSkills";
 import { TitlesSections } from "../../utils/titlesSections/titlesSections";
 import OutlineLayout from "../layout/layout";
+import { imageTitleGear } from "../../assets/icons/imagesFromTitles/index"
 
 export const Skills: React.FC = () => {
 	// Definir los estilos en una constante
@@ -29,7 +30,9 @@ export const Skills: React.FC = () => {
 		fontWeight: "bold",
 		fontStyle: "",
 		fontSize: "1.1rem",
-		color: "#FFFBA1",
+		// color: "#FFFBA1",
+		// color: "#FF6400",
+		color: "#FEF08A",
 		// textDecoration: "underline",
 		marginTop: "0.8rem",
 		marginBottom: "0.8rem",
@@ -44,10 +47,8 @@ export const Skills: React.FC = () => {
 
 	return (
 		<OutlineLayout>
-			<TitlesSections
-				title={"Tecnologías"}
-				icon={MiscellaneousServicesOutlinedIcon}
-			/>
+			{/* <TitlesSections title={"Tecnologías"} icon={MiscellaneousServicesOutlinedIcon} /> */}
+			<TitlesSections title={"Tecnologías"} image={imageTitleGear} />
 
 			<div style={columContainer}>
 				<div style={columnStyles}>

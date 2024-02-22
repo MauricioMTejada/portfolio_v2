@@ -2,15 +2,18 @@ import { Typography } from "@mui/material";
 import React, { CSSProperties } from "react";
 import BuildIcon from "@mui/icons-material/Build";
 import { SvgIconComponent } from "@mui/icons-material";
+import { imageTitleGear } from "../../assets/icons/imagesFromTitles/index"
 
 interface Props {
     title: string;
-    icon: SvgIconComponent;
+    // icon: SvgIconComponent;
+    image: string;
 }
 
-export const TitlesSections: React.FC<Props> = ({ title, icon: IconComponent }) => {
+// export const TitlesSections: React.FC<Props> = ({ title, icon: IconComponent }) => {
+export const TitlesSections: React.FC<Props> = ({ title, image }) => {
 
-    const ICON_MESURE = 40;
+    const ICON_MESURE = 27;
 
 	const containerStyle: CSSProperties = {
 		fontFamily: "Onest, sans-serif",
@@ -21,12 +24,14 @@ export const TitlesSections: React.FC<Props> = ({ title, icon: IconComponent }) 
         marginTop: "1rem",
 	};
 
-    const testStyle: CSSProperties = {
+    const textStyle: CSSProperties = {
         fontFamily: "Onest, sans-serif",
         fontWeight: "bold",
         fontSize: "1.5rem",
         marginTop: "1.2rem",
         marginBottom: "1.2rem",
+        // color: "rgb(0, 255, 70)"
+        color: "#FACC15"
     }
 
     const iconStyles: CSSProperties = {
@@ -42,8 +47,9 @@ export const TitlesSections: React.FC<Props> = ({ title, icon: IconComponent }) 
 
 	return (
 		<div style={containerStyle}>
-			<IconComponent style={{...iconStyles}} />
-			<Typography style={testStyle}>{title}</Typography>
+            <img src={image} alt="imageIcon" style={{...iconStyles}} />
+			{/* <IconComponent style={{...iconStyles}} /> */}
+			<Typography style={textStyle}>{title}</Typography>
 		</div>
 	);
 };

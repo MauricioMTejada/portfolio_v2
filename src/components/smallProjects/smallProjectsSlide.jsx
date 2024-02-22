@@ -1,6 +1,6 @@
 import { Component } from "react";
 
-import { IconButton, Paper } from "@mui/material";
+import { IconButton, Paper, SvgIcon } from "@mui/material";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 
 import { Carousel } from "react-responsive-carousel";
@@ -59,13 +59,17 @@ export const SmallProjectsSlide = ({ smallProjectsData }) => {
 				<div style={styleCentered}>
 					<div style={{ ...styleCentered, ...styleContendButton, order: 1 }}>
 						<IconButton onClick={this.prev} sx={{}}>
-							<ArrowForwardIosIcon style={{ transform: "scaleX(-1)" }} />
+							<SvgIcon style={{ color: "#FACC15", transform: "scaleX(-1)" }}>
+								<ArrowForwardIosIcon />
+							</SvgIcon>
 						</IconButton>
 					</div>
 
 					<div style={{ ...styleCentered, ...styleContendButton, order: 3 }}>
 						<IconButton onClick={this.next}>
-							<ArrowForwardIosIcon style={{ transform: "scaleX(1)" }} />
+							<SvgIcon style={{ color: "#FACC15", transform: "scaleX(1)" }}>
+								<ArrowForwardIosIcon />
+							</SvgIcon>
 						</IconButton>
 					</div>
 

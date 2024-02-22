@@ -7,6 +7,10 @@ import { IInfo } from "./request";
     const CARD_HEIGHT = CARD_WIDTH * 1.4;
 
 // Estilos
+    const styleA: React.CSSProperties = {
+        color: "inherit",
+        textDecoration: "none",
+    }
     const styleDivPrincipal: React.CSSProperties = {
         margin: "0 auto",
         marginBottom: "3rem",
@@ -42,6 +46,7 @@ import { IInfo } from "./request";
 
     const styleTitleContaine: React.CSSProperties  = {
         height: '10rem',
+        color: "#FEF08A"
     }
 
     const styleTextDescription: React.CSSProperties  = {
@@ -65,7 +70,7 @@ export const ArticlesCard: React.FC<Props> = ({ article, isActive }) => {
     const opacity = isActive ? 1 : 0.4
 
 	return (
-		// <div className={styles.cardStyle} style={{ ...styleDivPrincipal }} >
+        <a href={article.url} target="_blank" style={styleA} >
 		<div className={styles.cardStyle} style={{ ...styleDivPrincipal, opacity }} >
 			<div style={styleImageContainer}>
 				<img
@@ -93,6 +98,6 @@ export const ArticlesCard: React.FC<Props> = ({ article, isActive }) => {
 					{article.description}
 				</Typography>
 			</div>
-		</div>
+		</div></a>
 	);
 };

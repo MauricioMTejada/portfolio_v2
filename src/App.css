@@ -49,5 +49,6 @@ body {
 }
 
 .bg-gradient {
-  background-image: radial-gradient(ellipse at 50% -20%, rgba(120,119,198,0.3), rgba(255,255,255,0));
+  background-image: radial-gradient(ellipse at 50% -20%, rgba(58, 3, 255, 0.400), rgba(55, 8, 96, 0.100));
+  padding-bottom: 64px;
 }
