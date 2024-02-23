@@ -1,0 +1,36 @@
+
+.borderText {
+    border: 1px solid rgba(162, 161, 161, 0.200);
+    border-radius: 5px;
+    padding: 0.5rem;
+}
+.descriptionContainer {
+    position: relative;
+    max-height: 200px;
+    overflow-y: auto;
+    padding-right: 10px;
+}
+
+.descriptionText {
+    display: -webkit-box;
+    /* -webkit-line-clamp: 12; */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis; /* Agrega puntos suspensivos si el texto se corta */
+    font-family: 'Onest', sans-serif;
+    text-align: left;
+    white-space: pre-line; /* le da salto de línea */
+}
+
+/* Estilos para la barra de desplazamiento */
+.descriptionContainer::-webkit-scrollbar {
+    width: 5px;
+}
+
+.descriptionContainer::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.descriptionContainer::-webkit-scrollbar-thumb {
+    background: #888;
+}

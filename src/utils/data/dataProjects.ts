@@ -15,7 +15,11 @@ export const dataProjects: Project[] = [
     {
         name: "Ingenia",
         imageProject: ingeniaProject,
-        description: "Éste es mi primer proyecto grupal para Henry. Honestamente no recuerdo demasiado de mi vida veinte años atrás, pero sí sé que no estaba en una buena posición. Poco trabajo, poco dinero, ciclos de hardware extendidos al máximo… incluso llegué a usar Windows XP en un Pentium II de 233 MHz, que ya tenía seis años sobre los hombros. Nuestras opciones eran modificar-optimizar-destripar a Windows XP para obtener todo el rendimiento posible, o tirar los dados con Linux.",
+        description: `Proyecto grupal realizado para la academia Henry, Ingenia es una plataforma completa de venta de cursos en línea. Permite el registro de usuarios como Compradores, Vendedores y Administradores, cada uno con su propio panel de control. Utiliza una base de datos PostgreSQL y ofrece integración con PayPal para procesar pagos de manera segura.
+
+        Destaca por su funcionalidad de publicación de artículos literarios por parte de los vendedores, lo que enriquece la experiencia del usuario. Además, cuenta con secciones clave como el Top de Ventas de publicaciones y una lista de cursos favoritos, facilitando así a los usuarios la compra de los cursos que más les interesan.
+
+        Una característica destacada es su sección de descuentos, que promueve ofertas especiales y promociones para los usuarios. Este proyecto demuestra nuestro compromiso con la creación de soluciones completas y atractivas en el ámbito de la educación en línea.`,
         technologies: [ "JavaScript", "MaterialUI"],
         type: "project",
         url: "https://client-six-weld.vercel.app",

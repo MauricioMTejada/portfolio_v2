@@ -1,97 +1,55 @@
-import { Typography } from '@mui/material'
-import React from 'react'
-import { Technologies } from '../../utils/technologies/technologies'
-import { IDataProjectWithTech } from '../../utils/data/dataProjectsWithTechnologies';
-import styles from './projectsCard.module.css'
+import React from "react";
+import { Typography } from "@mui/material";
+import styles from "./projectsCard.module.css";
+
+import { Technologies } from "../../utils/technologies/technologies";
+import { IDataProjectWithTech } from "../../utils/data/dataProjectsWithTechnologies";
+import { ProjectsCardTextDescription } from "./projectsCardTextDescription";
 
 interface Props {
-    data: IDataProjectWithTech;
-    index: number;
+	data: IDataProjectWithTech;
+	index: number;
 }
 
-// Estilos
-	const styleA: React.CSSProperties = {
-		color: "inherit",
-		textDecoration: "none",
-	}
+export const ProjectsCard: React.FC<Props> = ({ data, index }) => {
+	return (
+		<a
+            className={styles.styleLink}
+            href={data.url}
+            target="_blank" >
 
-	const styleDivPrincipal: React.CSSProperties = {
-		marginBottom: "1rem",
-		display: "flex",
-		flexDirection: "row",
-		alignItems: "center",
-	};
+            <div
+                className={`${styles.cardStyleGlass} ${styles.styleDivPrincipal}`}
+                key={index}>
 
-	const styleImageContainer: React.CSSProperties = {
-		display: "flex",
-		flexDirection: "row",
-		alignItems: "center",
-		justifyContent: "center",
-		// padding: "0.5rem",
-	}
-	const styleImageProject: React.CSSProperties = {
-		width: '350px',
-		padding: '1rem',
-	}
+                <div className={styles.styleImageContainer}>
+                    <img
+                        src={data.imageProject}
+                        alt="imageProject"
+                        className={styles.styleImageProject}
+                    />
+                </div>
 
-	const styleDataContainer: React.CSSProperties = {
-		padding: "2rem",
-	}
+                <div className={styles.styleDataContainer}>
+                    <Typography
+                    gutterBottom
+                    variant="h5"
+                    component="div"
+                    className={styles.styleTextTitle}>
+                        {data.name}
+                    </Typography>
 
-	const styleTextTitle: React.CSSProperties = {
-		fontFamily: "Onest, sans-serif",
-		textAlign: 'left',
-		color: "#FEF08A",
-	}
+                    <ProjectsCardTextDescription textDescription={data.description} />
 
-	const styleTextDescription: React.CSSProperties = {
-		fontFamily: "Onest, sans-serif",
-		textAlign: 'left',
-	}
+                    <div className={styles.styleTextTechnologies}>
+                        <Typography >
+                            Tecnologías Usadas:
+                        </Typography>
+                    </div>
 
-	const styleTextTechnologies: React.CSSProperties = {
-		fontFamily: "Onest, sans-serif",
-		textAlign: 'left',
-		marginTop: '20px',
-		marginBottom: '20px',
-	}
-
-export const ProjectsCard: React.FC<Props> = ({ data, index}) => {
-  return (
-	<a href={data.url} target="_blank" className={styles.styleLink} >
-		<div className={styles.cardStyle} style={styleDivPrincipal} key={index}>
-			<div style={styleImageContainer}>
-				<img
-					src={data.imageProject}
-					alt="imageProject"
-					style={styleImageProject}
-				/>
-			</div>
-
-			<div style={styleDataContainer}>
-				<Typography
-					gutterBottom
-					variant="h5"
-					component="div"
-					style={styleTextTitle}
-					>
-					{data.name}
-				</Typography>
-
-				<Typography
-					variant="body1"
-					color="text.secondary"
-					style={styleTextDescription}
-				>
-					{data.description}
-				</Typography>
-
-				<Typography style={styleTextTechnologies}>
-					Tecnologías Usadas:
-				</Typography>
-
-				<Technologies technologies={data.technologies} />
-			</div>
-		</div></a>
+                    <Technologies technologies={data.technologies} />
+                </div>
+            </div>
+		</a>
 	);
-}
+};
