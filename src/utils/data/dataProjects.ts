@@ -94,20 +94,15 @@ export const dataProjects: Project[] = [
     {
         name: "CentralMedia",
         imageProject: centralMediaProject,
-        description: `Luego de finalizar la página 'RadioBrowser', sentí la necesidad de realizar una serie de modificaciones
-        significativas en el código. Dado el alcance extenso de estas modificaciones, decidí llevar a cabo un proyecto separado.
+        description: `Luego de finalizar la página 'RadioBrowser', sentí la necesidad de realizar una serie de modificaciones significativas en el código. Dado el alcance extenso de estas modificaciones, decidí llevar a cabo un proyecto separado.
 
-        CentralMedia ha sido desarrollado utilizando Next.js, Tailwind y TypeScript. En su esencia, este proyecto tiene como objetivo
-        principal presentar una lista de estaciones de radio de mi ciudad. Sin embargo, a diferencia de RadioBrowser,
-        la funcionalidad principal se basa en un control de reproducción centralizado.
+        CentralMedia ha sido desarrollado utilizando Next.js, Tailwind y TypeScript. En su esencia, este proyecto tiene como objetivo principal presentar una lista de estaciones de radio de mi ciudad. Sin embargo, a diferencia de RadioBrowser, la funcionalidad principal se basa en un control de reproducción centralizado.
 
-        Para lograr esto, aproveché la utilidad de la biblioteca "react-h5-audio-player", para la visualización
-        y control de la reproducción de audio de cada estación de radio; biblioteca que utilicé en el proyecto anterior.
+        Para lograr esto, aproveché la utilidad de la biblioteca "react-h5-audio-player", para la visualización y control de la reproducción de audio de cada estación de radio; biblioteca que utilicé en el proyecto anterior.
 
-        Además de la reproducción de audio, el proyecto CentralMedia está diseñado para ser compatible con fuentes de streaming de video.
-        Aunque esta característica aún se encuentra en desarrollo y no ha sido completamente implementada.
+        Además de la reproducción de audio, el proyecto CentralMedia está diseñado para ser compatible con fuentes de streaming de video. Aunque esta característica aún se encuentra en desarrollo y no ha sido completamente implementada.
         `,
-        technologies: [ "JavaScript", "MaterialUI", "Vite" ],
+        technologies: [ "JavaScript", "TypeScript", "React", "Next.JS", "radio-browser-api", "react-h5-audio-player", "Tailwind" ],
         type: "small project",
         url: "https://media-recopilation.vercel.app",
     },
