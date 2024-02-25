@@ -1,93 +1,62 @@
 import React from "react";
 import { Typography } from "@mui/material";
+import styles from "./smallProjectsCard.module.css";
+
 import { Technologies } from "../../utils/technologies/technologies";
-import styles from "../projects/projectsCard.module.css";
 import { IDataProjectWithTech } from "../../utils/data/dataProjectsWithTechnologies";
+import { SmallProjectsCardTextDescription } from "./smallProjectsCardTextDescription";
 
-// Estilos
-const styleA: React.CSSProperties = {
-	color: "inherit",
-	textDecoration: "none",
-};
+interface Props {
+	data: IDataProjectWithTech;
+	index: number;
+}
 
-const styleDivPrincipal: React.CSSProperties = {
-	marginBottom: "3rem",
-	display: "flex",
-	flexDirection: "row",
-	alignItems: "center",
-};
-
-const styleImageContainer: React.CSSProperties = {
-	display: "flex",
-	flexDirection: "row",
-	alignItems: "center",
-	justifyContent: "center",
-	// padding: "0.5rem",
-};
-const styleImageProject: React.CSSProperties = {
-	width: "350px",
-	padding: "1rem",
-};
-
-const styleDataContainer: React.CSSProperties = {
-	padding: "2rem",
-};
-
-const styleTextTitle: React.CSSProperties = {
-	fontFamily: "Onest, sans-serif",
-	textAlign: "left",
-	color: "#FEF08A",
-};
-
-const styleTextDescription: React.CSSProperties = {
-	fontFamily: "Onest, sans-serif",
-	textAlign: "left",
-};
-
-const styleTextTechnologies: React.CSSProperties = {
-	fontFamily: "Onest, sans-serif",
-	textAlign: "left",
-	marginTop: "20px",
-	marginBottom: "20px",
-};
-
-const SmallProjectsCard = ({ data }: { data: IDataProjectWithTech }) => {
+export const SmallProjectsCard: React.FC<Props> = ({ data, index }) => {
 	return (
-		<a href={data.url} target="_blank" style={styleA}>
-			<div className={styles.cardStyle} style={styleDivPrincipal}>
-				<div style={styleImageContainer}>
-					<img
-						src={data.imageProject}
-						alt="imageProject"
-						style={styleImageProject}
-					/>
+		<a className={styles.style01} href={data.url} target="_blank">
+			<div
+				className={`${styles.cardStyleGlass} ${styles.style02}`}
+				key={index}>
+				<div className={styles.style03}>
+					<div className={styles.styleImageContainer}>
+                        <Typography
+							gutterBottom
+							variant="h5"
+							component="div"
+							className={styles.styleTextTitle}
+                            style={{ display: "block"}}
+                            >
+							{data.name}
+						</Typography>
+						<img
+							src={data.imageProject}
+							alt="imageProject"
+							className={styles.styleImageProject}
+							style={{ width: "300px" }}
+						/>
+					</div>
+
+					<div className={styles.styleDataContainer} >
+						<Typography
+							gutterBottom
+							variant="h5"
+							component="div"
+							className={styles.styleTextTitle}
+                            style={{ opacity: 0 }} >
+							{"..."}
+						</Typography>
+
+						<SmallProjectsCardTextDescription textDescription={data.description} />
+					</div>
 				</div>
 
-				<div style={styleDataContainer}>
-					<Typography
-						gutterBottom
-						variant="h5"
-						component="div"
-						style={styleTextTitle}>
-						{data.name}
-					</Typography>
-
-					<Typography
-						variant="body1"
-						color="text.secondary"
-						style={styleTextDescription}>
-						{data.description}
-					</Typography>
-
-					<Typography style={styleTextTechnologies}>
+				<div className={styles.styleTextTechnologies}>
+					<Typography className={styles.styleTextTitle}>
 						Tecnologías Usadas:
 					</Typography>
-
 					<Technologies technologies={data.technologies} />
 				</div>
 			</div>
 		</a>
 	);
 };
-
-export default SmallProjectsCard;

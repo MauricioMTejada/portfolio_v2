@@ -1,4 +1,4 @@
-import styles from "./projectsCardTextDescription.module.css";
+import styles from "./smallProjectsCardTextDescription.module.css";
 import { Typography } from '@mui/material';
 import React, { useEffect, useRef, useState } from 'react'
 
@@ -6,7 +6,7 @@ interface Props {
     textDescription: string;
 }
 
-export const ProjectsCardTextDescription: React.FC<Props> = ({ textDescription}) => {
+export const SmallProjectsCardTextDescription: React.FC<Props> = ({ textDescription}) => {
 	const containerRef = useRef<HTMLDivElement>(null);
 	const [scrollPercentage, setScrollPercentage] = useState(0);
 

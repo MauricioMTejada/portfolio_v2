@@ -10,7 +10,13 @@ export interface IInfo {
 
 export const request = async () => {
   try {
-    let response = await axios.get(`https://dev.to/api/articles?per_page=10&username=mauriciomtejada`);
+        // Configura los encabezados de caché
+        const headers = {
+          // 'Cache-Control': 'no-cache',
+          // 'Pragma': 'no-cache'
+        };
+
+    let response = await axios.get(`https://dev.to/api/articles?per_page=10&username=mauriciomtejada`, { headers });
     // console.log(response.data);
 
     let info = response.data.map((item: any) => ({
@@ -22,6 +28,7 @@ export const request = async () => {
     }));
 
 
+    // console.log(info);
     return info;
 
   } catch (error) {

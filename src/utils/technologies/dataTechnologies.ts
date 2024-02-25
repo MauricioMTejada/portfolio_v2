@@ -1,14 +1,16 @@
 import { logoJavascript, logoMaterialui, logoTypescript, logoAuth0, logoTailwind,
     logoNextjs, logoVite, logoHtml, logoCss, logoReact, logoRedux, logoReduxToolkit,
     logoNode, logoPostgresql, logoMongodb, logoGit, logoGithub, logoVisualStudioCode,
-    logoPostman, logoVercel, logoFigma, logoTrello, logoExpress, } from "./imagesTechnologies";
+    logoPostman, logoVercel, logoFigma, logoTrello, logoExpress, logoNpm, logoNextUI,  } from "./imagesTechnologies";
 
-export type stringTypeTech = "language" | "framework" | "library" | "database" | "tool";
+export type stringTypeTech = "language" | "framework" | "library" | "database" | "tool" | "dependency";
 
 export type TechnologyName = "HTML" | "CSS" | "JavaScript" | "TypeScript" | "React"
     | "Next.JS" | "Node.JS" | "Express" | "PostgreSQL" | "MongoDB" | "MaterialUI"
     | "Redux" | "ReduxToolkit" | "Tailwind" | "Auth0" | "Git" | "GitHub"
-    | "Visual Studio Code" | "Postman" | "Figma" | "Vercel" | "Trello" | "Vite";
+    | "Visual Studio Code" | "Postman" | "Figma" | "Vercel" | "Trello" | "Vite"
+    | "react-datepicker" | "react-hook-form" | "react-qr-code" | "NextUI" | "radio-browser-api"
+    | "react-h5-audio-player";
 
 export interface ITechnologies {
     name: TechnologyName;
@@ -38,7 +40,13 @@ const technologies: ITechnologies[] = [
     { name: "Figma", image: logoFigma, typeTech: "tool" },
     { name: "Vercel", image: logoVercel, typeTech: "tool" },
     { name: "Trello", image: logoTrello, typeTech: "tool" },
-    { name: "Vite", image: logoVite, typeTech: "tool" }
+    { name: "Vite", image: logoVite, typeTech: "tool" },
+    { name: "react-datepicker", image: logoNpm, typeTech: "dependency", },
+    { name: "react-hook-form", image: logoNpm, typeTech: "dependency", },
+    { name: "react-qr-code", image: logoNpm, typeTech: "dependency", },
+    { name: "NextUI", image: logoNextUI, typeTech: "dependency", },
+    { name: "radio-browser-api", image: logoNpm, typeTech: "dependency", },
+    { name: "react-h5-audio-player", image: logoNpm, typeTech: "dependency", },
 ];
 
 export default technologies;

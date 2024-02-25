@@ -6,7 +6,7 @@ import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 
-import SmallProjectsCard from "./smallProjectsCard";
+import {SmallProjectsCard} from "./smallProjectsCard";
 
 export const SmallProjectsSlide = ({ smallProjectsData }) => {
 

@@ -71,7 +71,7 @@ export const ArticlesCard: React.FC<Props> = ({ article, isActive }) => {
 
 	return (
         <a href={article.url} target="_blank" style={styleA} >
-		<div className={styles.cardStyle} style={{ ...styleDivPrincipal, opacity }} >
+		<div className={styles.cardStyleGlass} style={{ ...styleDivPrincipal, opacity }} >
 			<div style={styleImageContainer}>
 				<img
 					src={article.cover_image}

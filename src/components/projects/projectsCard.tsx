@@ -13,43 +13,49 @@ interface Props {
 
 export const ProjectsCard: React.FC<Props> = ({ data, index }) => {
 	return (
-		<a
-            className={styles.styleLink}
-            href={data.url}
-            target="_blank" >
+		<a className={styles.style01} href={data.url} target="_blank">
+			<div
+				className={`${styles.cardStyleGlass} ${styles.style02}`}
+				key={index}>
+				<div className={styles.style03}>
+					<div className={styles.styleImageContainer}>
+                        <Typography
+							gutterBottom
+							variant="h5"
+							component="div"
+							className={styles.styleTextTitle}
+                            style={{ display: "block"}}
+                            >
+							{data.name}
+						</Typography>
+						<img
+							src={data.imageProject}
+							alt="imageProject"
+							className={styles.styleImageProject}
+						/>
+					</div>
 
-            <div
-                className={`${styles.cardStyleGlass} ${styles.styleDivPrincipal}`}
-                key={index}>
+					<div className={styles.styleDataContainer} >
+						<Typography
+							gutterBottom
+							variant="h5"
+							component="div"
+							className={styles.styleTextTitle}
+                            style={{ opacity: 0 }} >
+							{"..."}
+						</Typography>
 
-                <div className={styles.styleImageContainer}>
-                    <img
-                        src={data.imageProject}
-                        alt="imageProject"
-                        className={styles.styleImageProject}
-                    />
-                </div>
+						<ProjectsCardTextDescription textDescription={data.description} />
+					</div>
+				</div>
 
-                <div className={styles.styleDataContainer}>
-                    <Typography
-                    gutterBottom
-                    variant="h5"
-                    component="div"
-                    className={styles.styleTextTitle}>
-                        {data.name}
-                    </Typography>
-
-                    <ProjectsCardTextDescription textDescription={data.description} />
-
-                    <div className={styles.styleTextTechnologies}>
-                        <Typography >
-                            Tecnologías Usadas:
-                        </Typography>
-                    </div>
-
-                    <Technologies technologies={data.technologies} />
-                </div>
-            </div>
+				<div className={styles.styleTextTechnologies}>
+					<Typography className={styles.styleTextTitle}>
+						Tecnologías Usadas:
+					</Typography>
+					<Technologies technologies={data.technologies} />
+				</div>
+			</div>
 		</a>
 	);
 };
