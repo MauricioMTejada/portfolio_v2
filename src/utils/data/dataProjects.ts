@@ -87,7 +87,7 @@ export const dataProjects: Project[] = [
         Una vez que se obtiene esta información, la página web de RadioBrowser la presenta de manera organizada y fácil de navegar. Las estaciones de radio se muestran agrupadas por género musical, lo que permite a los usuarios explorar rápidamente diferentes tipos de contenido. Cada estación se presenta con su nombre distintivo y su logotipo, lo que ayuda a los usuarios a identificarlas visualmente.
 
         Además, RadioBrowser ofrece controles individuales para cada estación, lo que permite a los usuarios reproducir, pausar y ajustar el volumen de manera conveniente sin tener que cambiar de página o aplicación. Esto crea una experiencia de usuario fluida y agradable para los amantes de la radio en línea. `,
-        technologies: [ "JavaScript","React", "radio-browser-api", "react-h5-audio-player"  ],
+        technologies: [ "JavaScript", "TypeScript", "React", "radio-browser-api", "react-h5-audio-player"  ],
         type: "small project",
         url: "https://react-radio-browser.vercel.app",
     },

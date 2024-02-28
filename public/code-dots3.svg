@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   class="icon icon-tabler icon-tabler-code-dots"
+   width="24"
+   height="24"
+   viewBox="0 0 24 24"
+   stroke-width="1.5"
+   stroke="currentColor"
+   fill="none"
+   stroke-linecap="round"
+   stroke-linejoin="round"
+   version="1.1"
+   id="svg14"
+   sodipodi:docname="code-dots3.svg"
+   inkscape:version="1.2.2 (732a01da63, 2022-12-09)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs18" />
+  <sodipodi:namedview
+     id="namedview16"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     showgrid="false"
+     inkscape:zoom="27.812866"
+     inkscape:cx="10.462784"
+     inkscape:cy="11.667262"
+     inkscape:window-width="2000"
+     inkscape:window-height="1059"
+     inkscape:window-x="-9"
+     inkscape:window-y="2"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg14" />
+  <path
+     stroke="none"
+     d="M0 0h24v24H0z"
+     fill="none"
+     id="path2" />
+  <path
+     d="m 15.630054,20.502438 h 0.0121"
+     id="path4"
+     style="stroke:currentColor;stroke-width:2.1;stroke-dasharray:none;stroke-opacity:1" />
+  <path
+     d="m 11.999999,20.502438 h 0.0121"
+     id="path6"
+     style="stroke:currentColor;stroke-width:2.1;stroke-dasharray:none;stroke-opacity:1" />
+  <path
+     d="m 8.3699452,20.502438 h 0.0121"
+     id="path8"
+     style="stroke:currentColor;stroke-width:2.1;stroke-dasharray:none;stroke-opacity:1" />
+  <path
+     d="M 4.73989,20.502438 A 2.4200368,2.429268 0 0 1 2.3198532,18.07317 V 13.214634 L 1.1098348,12 2.3198532,10.785366 V 5.9268301 A 2.4200368,2.429268 0 0 1 4.73989,3.4975621"
+     id="path10"
+     style="stroke:currentColor;stroke-width:2.1;stroke-dasharray:none;stroke-opacity:1" />
+  <path
+     d="M 19.260109,20.502438 A 2.4200368,2.429268 0 0 0 21.680147,18.07317 V 13.214634 L 22.890165,12 21.680147,10.785366 V 5.9268301 a 2.4200368,2.429268 0 0 0 -2.420038,-2.429268"
+     id="path12"
+     style="stroke:currentColor;stroke-width:2.1;stroke-dasharray:none;stroke-opacity:1" />
+</svg>

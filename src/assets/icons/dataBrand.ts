@@ -8,7 +8,7 @@ export interface Brand {
     url: string;
 }
 
-export type nameBrand = "LinkedIn" | "Github" | "Currículum";
+export type nameBrand = "LinkedIn" | "Github" | "Currículum" | "Deploy";
 
 export const dataBrand: Brand[] = [
     {

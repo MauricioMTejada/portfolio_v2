@@ -1,0 +1,60 @@
+:root {
+  --button-width-heightCard: 36px;
+  --border-thicknessCard: 2px;
+  --icon-width-height: calc(var(--button-width-heightCard) - var(--border-thicknessCard) * 2);
+  --button-border-radius: calc(var(--button-width-heightCard) / 2);
+  --text-padding-right: calc(var(--icon-width-height) / 3);
+}
+
+.expandButton {
+  /* background-color: rgb(31, 41, 55); */
+  color: white;
+  text-decoration: none;
+  border-radius: var(--button-border-radius);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  overflow: hidden;
+  height: var(--button-width-heightCard);
+  min-width: var(--button-width-heightCard);
+  max-width: var(--button-width-heightCard);
+  -webkit-transition: max-width 0.5s;
+  transition: max-width 0.5s;
+  /* border: var(--border-thicknessCard) solid rgb(0, 255, 70); */
+  border: var(--border-thicknessCard) solid #FACC15;
+  cursor: pointer;
+}
+
+.expandButton:active {
+  cursor: grabbing;
+}
+
+.expandButton:hover {
+  max-width: 300px;
+}
+
+.icon {
+  font-size: 16px;
+  /* margin-right: 15px; */
+  /* padding: 0px 8px; */
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: var(--icon-width-height);
+  min-width: var(--icon-width-height);
+
+}
+
+.text {
+  white-space: nowrap;
+  padding-right: var(--text-padding-right);
+  /* padding-right: 10px; */
+}
+
+.divContainer {
+  display: "flex";
+  justify-content: "flex-start";
+  flex-direction: "row"
+}

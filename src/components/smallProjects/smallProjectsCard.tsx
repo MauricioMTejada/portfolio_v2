@@ -5,6 +5,7 @@ import styles from "./smallProjectsCard.module.css";
 import { Technologies } from "../../utils/technologies/technologies";
 import { IDataProjectWithTech } from "../../utils/data/dataProjectsWithTechnologies";
 import { SmallProjectsCardTextDescription } from "./smallProjectsCardTextDescription";
+import { RepositoryLink } from "../../utils/RepositoryLink/RepositoryLink";
 
 interface Props {
 	data: IDataProjectWithTech;
@@ -13,7 +14,7 @@ interface Props {
 
 export const SmallProjectsCard: React.FC<Props> = ({ data, index }) => {
 	return (
-		<a className={styles.style01} href={data.url} target="_blank">
+		// <a className={styles.style01} href={data.url} target="_blank">
 			<div
 				className={`${styles.cardStyleGlass} ${styles.style02}`}
 				key={index}>
@@ -55,8 +56,9 @@ export const SmallProjectsCard: React.FC<Props> = ({ data, index }) => {
 						Tecnologías Usadas:
 					</Typography>
 					<Technologies technologies={data.technologies} />
+					<RepositoryLink />
 				</div>
 			</div>
-		</a>
+		// {/* </a> */}
 	);
 };
