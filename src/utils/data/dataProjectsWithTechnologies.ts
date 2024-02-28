@@ -8,6 +8,7 @@ export interface IDataProjectWithTech {
     technologies: ITechnologies[];
     type: "project" | "small project";
     url: string;
+    repository: string;
 }
 
 const findTechnologies = (names: string[]): ITechnologies[] => {

@@ -8,16 +8,16 @@ export interface BrandForCard {
     // url: string;
 }
 
-export type nameBrandForCard = "Deploy" | "Github" ;
+export type nameBrandForCard = "Deployment" | "Repository" ;
 
 export const dataBrandForCard: BrandForCard[] = [
     {
-        name: "Deploy",
+        name: "Deployment",
         icon: DeployIcon,
         // url: "https://www.linkedin.com/in/mauricio-tejada-495aa4a8/",
     },
     {
-        name: "Github",
+        name: "Repository",
         icon: GitHubIcon,
         // url: "https://github.com/MauricioMTejada",
     },

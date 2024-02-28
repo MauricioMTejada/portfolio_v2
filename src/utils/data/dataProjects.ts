@@ -9,6 +9,7 @@ export interface Project {
     technologies: TechnologyName[];
     type: "project" | "small project";
     url: string;
+    repository: string;
 }
 
 export const dataProjects: Project[] = [
@@ -23,6 +24,7 @@ export const dataProjects: Project[] = [
         technologies: [ "JavaScript", "React", "MaterialUI", "PostgreSQL", "Node.JS", "Figma", "Redux", "Trello"],
         type: "project",
         url: "https://client-six-weld.vercel.app",
+        repository: "",
     },
     {
         name: "Timbring",
@@ -33,6 +35,7 @@ export const dataProjects: Project[] = [
         technologies: ["JavaScript", "React", "Next.JS", "PostgreSQL", "Auth0", "Tailwind", "Node.JS", "Trello", "ReduxToolkit", "Express"],
         type: "project",
         url: "https://www.timbring.com",
+        repository: "",
     },
     {
         name: "Countries",
@@ -46,6 +49,7 @@ export const dataProjects: Project[] = [
         technologies: [ "JavaScript", "React", "Node.JS", "Express", "PostgreSQL" ],
         type: "project",
         url: "https://pi-countries-frontend-seven.vercel.app",
+        repository: "",
     },
     {
         name: "Card.QR",
@@ -60,6 +64,7 @@ export const dataProjects: Project[] = [
         technologies: [ "JavaScript", "React", "Vite", "react-datepicker", "react-hook-form", "react-qr-code" ],
         type: "small project",
         url: "https://tarjeta-reactform-reactqr.vercel.app",
+        repository: "https://github.com/MauricioMTejada/CardQR",
     },
     {
         name: "Pokedex",
@@ -76,6 +81,7 @@ export const dataProjects: Project[] = [
         technologies: [ "JavaScript", "React","Next.JS", "NextUI", "TypeScript", "Tailwind",  ],
         type: "small project",
         url: "https://next-pokedesk-static.vercel.app",
+        repository: "https://github.com/MauricioMTejada/Pokedesk",
     },
     {
         name: "RadioBrowser",
@@ -90,6 +96,7 @@ export const dataProjects: Project[] = [
         technologies: [ "JavaScript", "TypeScript", "React", "radio-browser-api", "react-h5-audio-player"  ],
         type: "small project",
         url: "https://react-radio-browser.vercel.app",
+        repository: "https://github.com/MauricioMTejada/RadioBrowser",
     },
     {
         name: "CentralMedia",
@@ -105,5 +112,6 @@ export const dataProjects: Project[] = [
         technologies: [ "JavaScript", "TypeScript", "React", "Next.JS", "radio-browser-api", "react-h5-audio-player", "Tailwind" ],
         type: "small project",
         url: "https://media-recopilation.vercel.app",
+        repository: "https://github.com/MauricioMTejada/CentralMedia",
     },
 ];

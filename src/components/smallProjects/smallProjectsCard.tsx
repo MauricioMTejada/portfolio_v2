@@ -56,7 +56,8 @@ export const SmallProjectsCard: React.FC<Props> = ({ data, index }) => {
 						Tecnologías Usadas:
 					</Typography>
 					<Technologies technologies={data.technologies} />
-					<RepositoryLink />
+
+					<RepositoryLink repository={data.repository} url={data.url}/>
 				</div>
 			</div>
 		// {/* </a> */}
