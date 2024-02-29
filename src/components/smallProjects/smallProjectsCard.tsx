@@ -15,51 +15,52 @@ interface Props {
 export const SmallProjectsCard: React.FC<Props> = ({ data, index }) => {
 	return (
 		// <a className={styles.style01} href={data.url} target="_blank">
-			<div
-				className={`${styles.cardStyleGlass} ${styles.style02}`}
-				key={index}>
-				<div className={styles.style03}>
-					<div className={styles.styleImageContainer}>
-                        <Typography
-							gutterBottom
-							variant="h5"
-							component="div"
-							className={styles.styleTextTitle}
-                            style={{ display: "block"}}
-                            >
-							{data.name}
-						</Typography>
+		<div className={`${styles.cardStyleGlass} ${styles.style02}`} key={index}>
+			<div className={styles.style03}>
+				<div className={styles.styleImageContainer}>
+					<Typography
+						gutterBottom
+						variant="h5"
+						component="div"
+						className={styles.styleTextTitle}
+						style={{ display: "block" }}>
+						{data.name}
+					</Typography>
+					<a href={data.url} target="_blank">
 						<img
 							src={data.imageProject}
 							alt="imageProject"
 							className={styles.styleImageProject}
 							style={{ width: "300px" }}
 						/>
-					</div>
-
-					<div className={styles.styleDataContainer} >
-						<Typography
-							gutterBottom
-							variant="h5"
-							component="div"
-							className={styles.styleTextTitle}
-                            style={{ opacity: 0 }} >
-							{"..."}
-						</Typography>
-
-						<SmallProjectsCardTextDescription textDescription={data.description} />
-					</div>
+					</a>
 				</div>
 
-				<div className={styles.styleTextTechnologies}>
-					<Typography className={styles.styleTextTitle}>
-						Tecnologías Usadas:
+				<div className={styles.styleDataContainer}>
+					<Typography
+						gutterBottom
+						variant="h5"
+						component="div"
+						className={styles.styleTextTitle}
+						style={{ opacity: 0 }}>
+						{"..."}
 					</Typography>
-					<Technologies technologies={data.technologies} />
 
-					<RepositoryLink repository={data.repository} url={data.url}/>
+					<SmallProjectsCardTextDescription
+						textDescription={data.description}
+					/>
 				</div>
 			</div>
+
+			<div className={styles.styleTextTechnologies}>
+				<Typography className={styles.styleTextTitle}>
+					Tecnologías Usadas:
+				</Typography>
+				<Technologies technologies={data.technologies} />
+
+				<RepositoryLink repository={data.repository} url={data.url} />
+			</div>
+		</div>
 		// {/* </a> */}
 	);
 };

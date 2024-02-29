@@ -1,6 +1,7 @@
 
 .borderText {
-    border: 1px solid rgba(162, 161, 161, 0.200);
+    /* border: 1px solid rgba(162, 161, 161, 0.200); */
+    border: 1px solid #FACC15;
     border-radius: 5px;
     padding: 0.5rem;
     /* width: 100%; */
@@ -36,5 +37,6 @@
 }
 
 .descriptionContainer::-webkit-scrollbar-thumb {
-    background: #888;
+    /* background: #888; */
+    background: #facc15cd;
 }

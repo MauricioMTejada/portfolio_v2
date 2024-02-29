@@ -4,5 +4,6 @@ In the project directory, you can run:
 
 Colores de tipografía
 
-Naranja: "#FACC15"
-Naranja pálido: "#FEF08A"
+Naranja - Principal: "#FACC15"
+Naranja Tenue - Texto: "#FEF08A"
+Naranja Tenue - Scroll Bar: "#FACC15CD"

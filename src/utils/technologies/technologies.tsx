@@ -25,7 +25,8 @@ const stileDiv3: React.CSSProperties = {
 	display: "flex",
 	alignItems: "center",
 	margin: "5px",
-	border: "2px solid #6d6d6d",
+	// border: "2px solid #6d6d6d",
+	border: "2px solid #FACC15",
 	borderRadius: "16px",
 };
 
