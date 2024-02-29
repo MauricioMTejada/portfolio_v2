@@ -9,6 +9,7 @@ export interface IDataProjectWithTech {
     type: "project" | "small project";
     url: string;
     repository: string;
+    video?: string;
 }
 
 const findTechnologies = (names: string[]): ITechnologies[] => {

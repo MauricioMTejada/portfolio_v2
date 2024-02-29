@@ -10,6 +10,7 @@ export interface Project {
     type: "project" | "small project";
     url: string;
     repository: string;
+    video?: string;
 }
 
 export const dataProjects: Project[] = [
@@ -25,6 +26,7 @@ export const dataProjects: Project[] = [
         type: "project",
         url: "https://client-six-weld.vercel.app",
         repository: "",
+        video: "https://www.youtube.com/watch?v=jUNfrFeO4CY",
     },
     {
         name: "Timbring",
