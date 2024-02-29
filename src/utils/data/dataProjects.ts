@@ -31,7 +31,9 @@ export const dataProjects: Project[] = [
         imageProject: timbringProject,
         description: `Timbring es un servicio de entrega de productos diseñado específicamente para MercadoLibre. La aplicación ofrece una amplia gama de funciones, que incluyen un sistema de registro de usuarios, un intuitivo panel administrativo y un práctico panel de seguimiento de pedidos. Además, cuenta con formularios muy prácticos que facilitan la carga de datos.
 
-        Los usuarios pueden registrarse fácilmente en la plataforma y gestionar los detalles de sus pedidos realizados en MercadoLibre. También tienen la opción de agregar los números de teléfono de personas de confianza que residan cerca de su domicilio. En caso de que un pedido de MercadoLibre llegue a su hogar y el usuario no esté disponible para recibirlo, el servicio de alertas de Timbring les permite notificar tanto al contacto de confianza como al servicio de entrega. Estas alertas se envían de manera conveniente a través de WhatsApp.`,
+        Los usuarios pueden registrarse fácilmente en la plataforma y gestionar los detalles de sus pedidos realizados en MercadoLibre. También tienen la opción de agregar los números de teléfono de personas de confianza que residan cerca de su domicilio. En caso de que un pedido de MercadoLibre llegue a su hogar y el usuario no esté disponible para recibirlo, el servicio de alertas de Timbring les permite notificar tanto al contacto de confianza como al servicio de entrega. Estas alertas se envían de manera conveniente a través de WhatsApp.
+
+        Participé como parte del programa para egresados Henry Projects. Me sumé como desarrollador Fullstack voluntario para éste proyecto privado, por lo tanto no está disponible el código.`,
         technologies: ["JavaScript", "React", "Next.JS", "PostgreSQL", "Auth0", "Tailwind", "Node.JS", "Trello", "ReduxToolkit", "Express"],
         type: "project",
         url: "https://www.timbring.com",

@@ -24,6 +24,12 @@
 }
 
 .style03 {
+    /* display: block; */
+    /* position: absolute; */
+    pointer-events: none;
+}
+
+.style04 {
     display: block;
     position: absolute;
     /* justify-content: center;

@@ -1,16 +1,16 @@
 import React from "react";
-import styles from "./ExpandIconForCard.module.css";
+import styles from "./ExpandIconForCardGrey.module.css";
 import {
-	dataBrandForCard,
+	dataBrandForCardGrey,
 	nameBrandForCard,
-} from "../../assets/icons/dataBrandForCard";
+} from "../../assets/icons/dataBrandForCardGrey";
 
 interface Props {
 	name: nameBrandForCard;
 }
 
-const ExpandIconForCard: React.FC<Props> = ({ name }) => {
-	const [filterBrand] = dataBrandForCard.filter((brand) => brand.name === name);
+const ExpandIconForCardGrey: React.FC<Props> = ({ name }) => {
+	const [filterBrand] = dataBrandForCardGrey.filter((brand) => brand.name === name);
 
 	return (
 		<div className={styles.expandButton}>
@@ -22,4 +22,4 @@ const ExpandIconForCard: React.FC<Props> = ({ name }) => {
 	);
 };
 
-export default ExpandIconForCard;
+export default ExpandIconForCardGrey;
