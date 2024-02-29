@@ -31,7 +31,7 @@ export const SmallProjectsCard: React.FC<Props> = ({ data, index }) => {
 							src={data.imageProject}
 							alt="imageProject"
 							className={styles.styleImageProject}
-							style={{ width: "300px" }}
+							style={{ width: "300px", border: "2px solid #FACC15" }}
 						/>
 					</a>
 				</div>

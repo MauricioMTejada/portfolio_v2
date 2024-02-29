@@ -30,6 +30,7 @@ import { IInfo } from "./request";
         // padding: "0.5rem",
     }
     const styleImageProject: React.CSSProperties  = {
+        borderBottom: "2px solid #FACC15",
         // width: '350px',
         // padding: '1rem',
     }

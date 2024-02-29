@@ -42,6 +42,7 @@
 .styleImageProject {
     width: 800px;
     border-radius: 5px;
+    border: 2px solid #FACC15;
     /* background-color: red; */
     /* opacity: 0; */
     /* padding: 1rem; */

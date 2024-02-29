@@ -41,6 +41,7 @@
 .styleImageProject {
     width: 350px;
     border-radius: 5px;
+    border: 2px solid #FACC15;
     /* padding: 1rem; */
 }
 

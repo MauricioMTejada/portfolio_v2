@@ -35,6 +35,10 @@ const titleStyles: React.CSSProperties = {
   marginBottom: "1.5rem"
 };
 
+const orangeText: React.CSSProperties = {
+  color: "#FACC15"
+}
+
 const paragraphStyles: React.CSSProperties = {
   fontFamily: "Onest, sans-serif",
   fontSize: "1.255rem",
@@ -47,7 +51,7 @@ const Presentation: React.FC = () => {
       <div style={contentContainerStyles}>
         <div style={textContainerStyles}>
           <Typography variant="h1" sx={titleStyles}>
-            Hola, soy Mauricio
+            Hola, soy <span style={orangeText}>Mauricio</span>
           </Typography>
 
           <Typography paragraph align="left" sx={paragraphStyles}>
