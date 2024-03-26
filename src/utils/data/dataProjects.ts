@@ -24,8 +24,8 @@ export const dataProjects: Project[] = [
         Una característica destacada es su sección de descuentos, que promueve ofertas especiales y promociones para los usuarios. Este proyecto demuestra nuestro compromiso con la creación de soluciones completas y atractivas en el ámbito de la educación en línea.`,
         technologies: [ "JavaScript", "React", "MaterialUI", "PostgreSQL", "Node.JS", "Figma", "Redux", "Trello"],
         type: "project",
-        url: "https://client-six-weld.vercel.app",
-        repository: "",
+        url: "https://ingenia-v2-frontend.vercel.app",
+        repository: "https://github.com/MauricioMTejada/ingenia_v2_frontend",
         video: "https://www.youtube.com/watch?v=jUNfrFeO4CY",
     },
     {
