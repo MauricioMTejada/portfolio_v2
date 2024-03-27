@@ -17,11 +17,13 @@ export const dataProjects: Project[] = [
     {
         name: "Ingenia",
         imageProject: ingeniaProject,
-        description: `Proyecto grupal realizado para la academia Henry, Ingenia es una plataforma completa de venta de cursos en línea. Permite el registro de usuarios como Compradores, Vendedores y Administradores, cada uno con su propio panel de control. Utiliza una base de datos PostgreSQL y ofrece integración con PayPal para procesar pagos de manera segura.
+        description: `Proyecto grupal realizado para la academia Henry. Ingenia es una plataforma completa de venta de cursos en línea. Permite el registro de usuarios como Compradores, Vendedores y Administradores, cada uno con su propio panel de control. Utiliza una base de datos PostgreSQL y ofrece integración con PayPal para procesar pagos de manera segura.
 
         Destaca por su funcionalidad de publicación de artículos literarios por parte de los vendedores, lo que enriquece la experiencia del usuario. Además, cuenta con secciones clave como el Top de Ventas de publicaciones y una lista de cursos favoritos, facilitando así a los usuarios la compra de los cursos que más les interesan.
 
-        Una característica destacada es su sección de descuentos, que promueve ofertas especiales y promociones para los usuarios. Este proyecto demuestra nuestro compromiso con la creación de soluciones completas y atractivas en el ámbito de la educación en línea.`,
+        Una característica destacada es su sección de descuentos, que promueve ofertas especiales y promociones para los usuarios. Este proyecto demuestra nuestro compromiso con la creación de soluciones completas y atractivas en el ámbito de la educación en línea.
+
+        Nota: cuando se ingresa por primer vez al sitio, hay una demora de unos 40 segundos en la carga del sitio debido a las características del servidor. Luego no presenta ésta demora mientras se navega.`,
         technologies: [ "JavaScript", "React", "MaterialUI", "PostgreSQL", "Node.JS", "Figma", "Redux", "Trello"],
         type: "project",
         url: "https://ingenia-v2-frontend.vercel.app",
@@ -53,7 +55,7 @@ export const dataProjects: Project[] = [
         technologies: [ "JavaScript", "React", "Node.JS", "Express", "PostgreSQL" ],
         type: "project",
         url: "https://pi-countries-frontend-seven.vercel.app",
-        repository: "",
+        repository: "https://github.com/MauricioMTejada/PI-Countries-Frontend",
     },
     {
         name: "Card.QR",
