@@ -1,0 +1,60 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* margin: 2rem 0rem; */
+    padding: 2rem 0rem;
+}
+
+.contentContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: start;
+    /* width: 75%; */
+    /* margin-left: 1rem;
+    margin-right: 1rem; */
+    /* margin-top: 8rem;
+    margin-bottom: 0rem; */
+}
+
+.textContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+}
+
+.title {
+    font-family: Onest, sans-serif;
+    font-size: 2.255rem;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+}
+
+.orangeText {
+    color: #FACC15;
+}
+
+.paragraph {
+    font-family: Onest, sans-serif;
+    font-size: 1.255rem;
+    padding-right: 4rem;
+}
+
+@media screen and (max-width: 768px) {
+    .contentContainer {
+        flex-direction: column;
+        margin-top: 4rem;
+        align-items: center;
+    }
+
+    .title {
+        font-size: 2rem;
+    }
+    .paragraph {
+        font-size: 1.125rem;
+        padding-right: 0rem;
+        padding-bottom: 4rem;
+    }
+}

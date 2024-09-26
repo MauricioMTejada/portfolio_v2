@@ -1,0 +1,72 @@
+:root {
+  --size-container-image-profile: 170px;
+  --midle-size-container-image-profile: calc(var(--size-container-image-profile) / 2);
+  --size-icon: 36px;
+  --midle-size-icon: calc(var(--size-icon) / 2);
+  --border-image-profile: calc(var(--midle-size-container-image-profile) - var(--midle-size-icon));
+  --icon-distance: 5px;
+
+  /* Ángulos por defecto para pantallas menores a 768px */
+  --angle1: -45deg;
+  --angle2: 0deg;
+  --angle3: 45deg;
+}
+
+@media (min-width: 768px) {
+  :root {
+    /* Ángulos para pantallas de 768px o más */
+    --angle1: -15deg;
+    --angle2: 30deg;
+    --angle3: 75deg;
+  }
+}
+
+.supraContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  min-width: 260px;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  /* min-width: 350px; */
+}
+
+.block {
+  display: block;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+}
+
+.iconContainer {
+  position: absolute;
+}
+
+.icon1 .iconContainer {
+  transform:
+    translate(
+      calc(-1 * var(--midle-size-icon) + var( --midle-size-container-image-profile) * cos(var(--angle1))),
+      calc(-1 * var(--midle-size-icon) + var( --midle-size-container-image-profile) * sin(var(--angle1)))
+    );
+}
+
+.icon2 .iconContainer {
+  transform:
+    translate(
+      calc(-1 * var(--midle-size-icon) + var( --midle-size-container-image-profile) * cos(var(--angle2))),
+      calc(-1 * var(--midle-size-icon) + var( --midle-size-container-image-profile) * sin(var(--angle2)))
+    );
+}
+
+.icon3 .iconContainer {
+  transform:
+    translate(
+      calc(-1 * var(--midle-size-icon) + var( --midle-size-container-image-profile) * cos(var(--angle3))),
+      calc(-1 * var(--midle-size-icon) + var( --midle-size-container-image-profile) * sin(var(--angle3)))
+    );
+}

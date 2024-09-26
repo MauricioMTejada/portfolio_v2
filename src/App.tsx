@@ -36,7 +36,7 @@ function App() {
 						{" "}
 						<Skills />
 					</section>
-					<section>
+					{/* <section>
 						{" "}
 						<Projects />{" "}
 					</section>
@@ -47,7 +47,7 @@ function App() {
 					<section>
 						{" "}
 						<Articles />
-					</section>
+					</section> */}
 				</main>
 			</div>
 
