@@ -54,3 +54,18 @@ body {
   /* background-image: radial-gradient(ellipse at 50% -20%, rgba(120, 119, 198, 0.3), rgba(255, 255, 255, 0)); */
   padding-bottom: 64px;
 }
+
+:root {
+  --hyperlink-color: #9c9ce1;
+  --hyperlink-hover-color: #7b599b;
+}
+
+.hyperlink-style {
+  color: var(--hyperlink-color);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.hyperlink-style:hover {
+  color: var(--hyperlink-hover-color);
+}

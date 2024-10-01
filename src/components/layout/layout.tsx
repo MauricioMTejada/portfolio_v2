@@ -11,7 +11,8 @@ const OutlineLayout: React.FC<IOutlineLayout>  = ({ children }) => {
         border: '2px solid gray',
         borderRadius: '5px',
         padding: '10px',
-        marginBottom: '4rem',
+        marginTop: '2rem',
+        marginBottom: '2rem',
          }}>
       {children}
     </div>

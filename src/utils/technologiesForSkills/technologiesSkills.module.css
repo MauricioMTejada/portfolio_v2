@@ -1,0 +1,49 @@
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+.item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.itemImportant {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 0.4rem;
+}
+
+
+.image {
+    max-width: 35px;
+    max-height: 35px;
+    margin-right: 5px;
+    padding: 2px;
+    border-radius: 20%;
+}
+
+.text {
+    font-family: 'Onest', sans-serif;
+    margin-right: 30px;
+}
+
+.textMostrar {
+    font-family: 'Onest', sans-serif;
+    font-size: 0.9rem;
+    color: var(--hyperlink-color);
+    /* Color estándar de hipervínculo */
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    margin: 0px 0px 0px 37px;
+}
+
+.textMostrar:hover {
+    color: var(--hyperlink-hover-color);
+    /* Color estándar de hipervínculo visitado */
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    cursor: pointer;
+}

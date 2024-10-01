@@ -12,7 +12,7 @@
   --angle3: 45deg;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 769px) {
   :root {
     /* Ángulos para pantallas de 768px o más */
     --angle1: -15deg;
