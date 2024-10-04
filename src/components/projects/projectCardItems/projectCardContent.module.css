@@ -1,0 +1,50 @@
+.style03 {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+}
+
+.styleImageContainer {
+    min-width: 350px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+.videoContainer {
+    width: 100%;
+    max-width: 350px;
+}
+
+.video {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+}
+
+.styleImageProject {
+    width: 100%;
+    max-width: 350px;
+    height: auto;
+    object-fit: cover;
+}
+
+.styleDataContainer {
+    width: 100%;
+    padding-left: 1rem;
+}
+
+@media screen and (max-width: 768px) {
+    .style03 {
+        justify-content: flex-start;
+        flex-direction: column;
+    }
+    .styleImageContainer {
+        min-width: auto;
+        width: auto;
+    }
+
+    .styleDataContainer {
+        padding: 0rem;
+    }
+}

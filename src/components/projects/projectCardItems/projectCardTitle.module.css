@@ -1,0 +1,22 @@
+.titleProject {
+    margin-bottom: 1rem;
+    padding-left: 4rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.styleTextTitle {
+    display: block;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    color: #FEF08A;
+}
+
+@media screen and (max-width: 768px) {
+    .titleProject{
+        flex-direction: column;
+        padding-left: 0rem;
+    }
+}

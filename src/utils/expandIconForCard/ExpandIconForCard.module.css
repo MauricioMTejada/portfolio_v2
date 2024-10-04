@@ -58,3 +58,20 @@
   justify-content: "flex-start";
   flex-direction: "row"
 }
+
+@media screen and (max-width: 768px) {
+  .expandButton {
+    max-width: 300px;
+  }
+
+  .text {
+    color: #9c9ce1; /* Color estándar de hipervínculo */
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    /* padding-right: 0; */
+  }
+
+  .expandButton:hover .text {
+    color: #7b599b; /* Color estándar de hipervínculo visitado */
+  }
+}

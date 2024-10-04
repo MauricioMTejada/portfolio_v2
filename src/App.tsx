@@ -36,11 +36,11 @@ function App() {
 						{" "}
 						<Skills />
 					</section>
-					{/* <section>
+					<section>
 						{" "}
 						<Projects />{" "}
 					</section>
-					<section>
+					{/* <section>
 						{" "}
 						<SmallProjects />{" "}
 					</section>

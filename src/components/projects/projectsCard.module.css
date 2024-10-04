@@ -1,11 +1,10 @@
-.style01 {
+/* .style01 {
     color: inherit;
     text-decoration: none;
     transition: transform 0.3s ease;
-    /* Agrega una transición suave */
-}
+} */
 
-.cardStyleGlass {
+.styleGlass {
     /* From https://css.glass */
     background: rgba(255, 255, 255, 0.05);
     border-radius: 16px;
@@ -15,19 +14,22 @@
     border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
-.style02 {
+.content {
     margin-bottom: 1rem;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    padding: 2rem;
 }
+
+
 
 .style03 {
     display: flex;
     flex-direction: row;
-    padding: 2rem;
     /* align-items: start; */
     justify-content: flex-start;
+    padding-bottom: 2rem;
 }
 
 .styleImageContainer {
@@ -60,13 +62,19 @@
     color: #FEF08A;
     /* margin-top: 2em;
     margin-bottom: 1em; */
-    padding: 0 2rem 2rem 2rem;
     width: 100%;
 }
 
 .styleTextTitle {
     font-family: Onest, sans-serif;
     text-align: left;
-    color: #FEF08A;
+    /* color: #FEF08A; */
+    color: var(--title-section-02);
     width: 100px;
+}
+
+@media screen and (max-width: 768px) {
+    .content {
+        padding: 2rem 1rem;
+    }
 }

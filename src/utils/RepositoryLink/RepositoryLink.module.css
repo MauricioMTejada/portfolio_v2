@@ -36,3 +36,11 @@
     align-items: center;
     position: absolute; */
 }
+
+@media screen and (max-width: 768px) {
+    .style01 {
+        height: 110px;
+        justify-content: space-evenly;
+    }
+
+}

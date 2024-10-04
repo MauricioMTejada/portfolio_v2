@@ -58,6 +58,8 @@ body {
 :root {
   --hyperlink-color: #9c9ce1;
   --hyperlink-hover-color: #7b599b;
+  --title-section-01: #FACC15;
+  --title-section-02: #FEF08A;
 }
 
 .hyperlink-style {
