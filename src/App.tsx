@@ -40,11 +40,11 @@ function App() {
 						{" "}
 						<Projects />{" "}
 					</section>
-					{/* <section>
+					<section>
 						{" "}
 						<SmallProjects />{" "}
 					</section>
-					<section>
+					{/* <section>
 						{" "}
 						<Articles />
 					</section> */}

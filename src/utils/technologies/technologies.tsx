@@ -15,7 +15,7 @@ export const Technologies: React.FC<TechnologiesProps> = ({ technologies }) => {
           <div key={index} className={styles.techItem}>
             <img src={tech.image} alt={tech.name} className={styles.techImage} />
             <div className={styles.techName}>
-              <Typography variant="body1" >
+              <Typography variant="body1" className={styles.techText}>
                 {tech.name}
               </Typography>
             </div>

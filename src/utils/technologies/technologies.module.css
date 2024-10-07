@@ -1,37 +1,46 @@
 .container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-  }
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+}
 
-  .techList {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
+.techList {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+}
 
-  .techItem {
-    display: flex;
-    align-items: center;
-    margin: 5px;
-    border: 2px solid #FACC15;
-    border-radius: 16px;
-  }
+.techItem {
+	display: flex;
+	align-items: center;
+	margin: 5px;
+	border: 2px solid #FACC15;
+	border-radius: 16px;
+	max-width: 100%;
+}
 
-  .techImage {
-    width: 30px;
-    height: 30px;
-    margin-right: 5px;
-    border-top-right-radius: 0%;
-    border-bottom-right-radius: 0%;
-    border-top-left-radius: 50%;
-    border-bottom-left-radius: 50%;
-    padding: 2px;
-  }
+.techImage {
+	width: 30px !important;
+	height: 30px;
+	margin-right: 5px;
+	border-top-right-radius: 0%;
+	border-bottom-right-radius: 0%;
+	border-top-left-radius: 50%;
+	border-bottom-left-radius: 50%;
+	padding: 2px;
+	flex-shrink: 0;
+}
 
-  .techName {
-    margin-right: 5px;
-  }
+.techName {
+	margin-right: 5px;
+	/* overflow: hidden; */
+}
+
+.techText {
+	white-space: nowrap;
+	/* overflow: hidden;
+	text-overflow: ellipsis; */
+}

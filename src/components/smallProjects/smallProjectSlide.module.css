@@ -1,0 +1,28 @@
+.centered {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .contentButton {
+    width: 70px;
+  }
+
+  .carouselContainer {
+    width: 900px;
+  }
+
+  .arrowIcon {
+    color: #FACC15;
+  }
+
+  .arrowIconLeft {
+    color: #FACC15;
+    transform: scaleX(-1);
+  }
+
+  .arrowIconRight {
+    color: #FACC15;
+    transform: scaleX(1);
+  }
