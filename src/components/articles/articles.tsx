@@ -36,11 +36,9 @@ export const Articles = () => {
 
 	return (
 		<OutlineLayout>
-			{/* <TitlesSections title={"Publicaciones"} icon={ArtTrackOutlinedIcon} /> */}
 			<TitlesSections title={"Publicaciones"} image={imageTitleArticle} />
 
 			{data && data.length > 0 ? <Slides data={data} /> : <CircularProgress />}
-			{/* {data.length > 0 ? <SimpleSlider data={data} /> : <CircularProgress />} */}
 		</OutlineLayout>
 	);
 };

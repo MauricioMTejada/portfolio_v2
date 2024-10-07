@@ -1,66 +1,8 @@
-import { Typography, } from "@mui/material";
-import styles from '../projects/projectsCard.module.css'
+import React, { useMemo } from "react";
+import { Typography } from "@mui/material";
+import styles from './articlesCard.module.css';
 import { IInfo } from "./request";
-
-// Constantes
-    const CARD_WIDTH = 400;
-    const CARD_HEIGHT = CARD_WIDTH * 1.4;
-
-// Estilos
-    const styleA: React.CSSProperties = {
-        color: "inherit",
-        textDecoration: "none",
-    }
-    const styleDivPrincipal: React.CSSProperties = {
-        margin: "0 auto",
-        marginBottom: "3rem",
-        display: "flex",
-        flexDirection: "column",
-        alignItems: "center",
-        width: `${CARD_WIDTH}px`,
-        height: `${CARD_HEIGHT}px`,
-        overflow: "hidden",
-    };
-
-    const styleImageContainer: React.CSSProperties  = {
-        display: "flex",
-        flexDirection: "row",
-        alignItems: "center",
-        justifyContent: "center",
-        // padding: "0.5rem",
-    }
-    const styleImageProject: React.CSSProperties  = {
-        borderBottom: "2px solid #FACC15",
-        // width: '350px',
-        // padding: '1rem',
-    }
-
-    const styleDataContainer: React.CSSProperties  = {
-        padding: "2rem",
-    }
-
-    const styleTextTitle: React.CSSProperties  = {
-        fontFamily: "Onest, sans-serif",
-        textAlign: 'left',
-        // marginBottom: '2rem',
-    }
-
-    const styleTitleContaine: React.CSSProperties  = {
-        height: '10rem',
-        color: "#FEF08A"
-    }
-
-    const styleTextDescription: React.CSSProperties  = {
-        fontFamily: "Onest, sans-serif",
-        textAlign: 'left',
-    }
-
-    const styleTextTechnologies: React.CSSProperties  = {
-        fontFamily: "Onest, sans-serif",
-        textAlign: 'left',
-        marginTop: '20px',
-        marginBottom: '20px',
-    }
+import { useWindowSize } from "../../utils/widthWindow/useWindowSize";
 
 interface Props {
     article: IInfo;
@@ -68,37 +10,54 @@ interface Props {
 }
 
 export const ArticlesCard: React.FC<Props> = ({ article, isActive }) => {
-    const opacity = isActive ? 1 : 0.4
+    const { width } = useWindowSize();
 
-	return (
-        <a href={article.url} target="_blank" style={styleA} >
-		<div className={styles.cardStyleGlass} style={{ ...styleDivPrincipal, opacity }} >
-			<div style={styleImageContainer}>
-				<img
-					src={article.cover_image}
-					alt="imageProject"
-					style={styleImageProject}
-				/>
-			</div>
+    const opacity = useMemo(() => {
+        if (width < 769) {
+            return isActive ? 1 : 0;
+        } else {
+            return isActive ? 1 : 0.4;
+        }
+    }, [isActive, width]);
 
-			<div style={styleDataContainer}>
-				<div style={styleTitleContaine}>
-					<Typography
-						gutterBottom
-						variant="h5"
-						component="div"
-						style={styleTextTitle}>
-						{article.title}
-					</Typography>
-				</div>
+    const cardStyle = useMemo(() => {
+        return {
+            opacity,
+            width: width < 469 ? 'auto' : '400px',
+            height: width < 469 ? 'auto' : '560px',
+        };
+    }, [opacity, width]);
 
-				<Typography
-					variant="body1"
-					color="text.secondary"
-					style={styleTextDescription}>
-					{article.description}
-				</Typography>
-			</div>
-		</div></a>
-	);
+    return (
+        <a href={article.url} target="_blank" className={styles.cardLink}>
+            <div className={`${styles.cardContainer} ${styles.cardStyleGlass}`} style={cardStyle}>
+                <div className={styles.imageContainer}>
+                    <img
+                        src={article.cover_image}
+                        alt="imageProject"
+                        className={styles.articleImage}
+                    />
+                </div>
+
+                <div className={styles.dataContainer}>
+                    <div className={styles.titleContainer}>
+                        <Typography
+                            gutterBottom
+                            variant="h5"
+                            component="div"
+                            className={styles.title}>
+                            {article.title}
+                        </Typography>
+                    </div>
+
+                    <Typography
+                        variant="body1"
+                        color="text.secondary"
+                        className={styles.description}>
+                        {article.description}
+                    </Typography>
+                </div>
+            </div>
+        </a>
+    );
 };

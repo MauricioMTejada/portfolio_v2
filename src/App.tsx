@@ -44,10 +44,10 @@ function App() {
 						{" "}
 						<SmallProjects />{" "}
 					</section>
-					{/* <section>
+					<section>
 						{" "}
 						<Articles />
-					</section> */}
+					</section>
 				</main>
 			</div>
 

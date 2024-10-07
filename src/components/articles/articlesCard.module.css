@@ -1,0 +1,58 @@
+.cardLink {
+    color: inherit;
+    text-decoration: none;
+}
+
+.cardContainer {
+    margin: 0 auto;
+    margin-bottom: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 400px;
+    height: 560px;
+    overflow: hidden;
+}
+
+.imageContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.articleImage {
+    border-bottom: 2px solid #FACC15;
+    max-width: 100%;
+    height: auto;
+}
+
+.dataContainer {
+    padding: 2rem;
+}
+
+.titleContainer {
+    height: 10rem;
+    color: #FEF08A;
+}
+
+.title {
+    font-family: "Onest", sans-serif;
+    text-align: left;
+}
+
+.description {
+    font-family: "Onest", sans-serif;
+    text-align: left;
+}
+
+@media (max-width: 468px) {
+    .cardContainer {
+        width: auto;
+        height: auto;
+    }
+
+    .title {
+        font-size: 20px;
+    }
+}
