@@ -9,6 +9,6 @@ Naranja Tenue - Texto: "#FEF08A"
 Naranja Tenue - Scroll Bar: "#FACC15CD"
 
 Para agregar un Proyecto:
-agregar información en archivo "src\utils\data\dataProjects.ts"
+agregar información en archivo `src\utils\data\dataProjects.ts`
 
-Las imágenes de los proyectos en el directorio "src\utils\data\imagesDeployPreview", con resolución 16:9
+Las imágenes de los proyectos en el directorio `src\utils\data\imagesDeployPreview`, con resolución 16:9

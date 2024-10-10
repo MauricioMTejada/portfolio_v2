@@ -122,8 +122,6 @@ export const dataProjects: Project[] = [
         CentralMedia ha sido desarrollado utilizando Next.js, Tailwind y TypeScript. En su esencia, este proyecto tiene como objetivo principal presentar una lista de estaciones de radio de mi ciudad. Sin embargo, a diferencia de RadioBrowser, la funcionalidad principal se basa en un control de reproducción centralizado.
 
         Para lograr esto, aproveché la utilidad de la biblioteca "react-h5-audio-player", para la visualización y control de la reproducción de audio de cada estación de radio; biblioteca que utilicé en el proyecto anterior.
-
-        Además de la reproducción de audio, el proyecto CentralMedia está diseñado para ser compatible con fuentes de streaming de video. Aunque esta característica aún se encuentra en desarrollo y no ha sido completamente implementada.
         `,
         technologies: [ "JavaScript", "TypeScript", "React", "Next.JS", "radio-browser-api", "react-h5-audio-player", "Tailwind" ],
         type: "small project",
