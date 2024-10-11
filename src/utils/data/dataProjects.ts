@@ -10,7 +10,7 @@ import {
     reactandnextpart2,
     } from './imagesDeployPreview';
 // import { ITechnologies, techAuth0, techJavascript, techMaterialui, techNextjs, techTailwind, techTypescript, techVite } from '../technologies/dataTechnologies';
-import technologies, { ITechnologies, TechnologyName } from "../technologies/dataTechnologies";
+import { TechnologyName } from "../technologies/dataTechnologies";
 
 export interface Project {
     name: string;
